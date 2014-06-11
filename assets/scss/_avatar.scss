@@ -1,0 +1,19 @@
+.avatar {
+	text-align: center;
+	position: relative;
+	margin: 25px auto;
+}
+
+.avatar-wrapper::before {
+	position: absolute;
+	background-color: white;
+	content: '';
+	height: 150px;
+	width: 10px;
+}
+
+.avatar img {
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+}

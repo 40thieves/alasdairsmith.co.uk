@@ -1,0 +1,29 @@
+.links {
+	a {
+		margin: 10px auto;
+		padding: 20px 0;
+		display: block;
+		text-align: center;
+		font-size: 130%;
+
+		&#blog {
+			background: transparentize($light-green, 0.8);
+		}
+
+		&#email {
+			background: transparentize($turqoise, 0.8);
+		}
+
+		&#twitter {
+			background: transparentize($dark-purple, 0.8);
+		}
+
+		&#delicious {
+			background: transparentize($light-red, 0.8);
+		}
+
+		&#flickr {
+			background: transparentize($yellow, 0.8);
+		}
+	}
+}

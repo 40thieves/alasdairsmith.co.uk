@@ -1,0 +1,48 @@
+.logo {
+	color: $main-header-color;
+	text-align: center;
+
+	margin-top: 55px;
+	margin-bottom: 10px;
+	line-height: 0.7em;
+	font-size: 2.5rem;
+
+	a {
+		color: $main-header-color;
+		line-height: 1em;
+		display: inline-block;
+
+		& > span {
+			float: left;
+		}
+
+		.name {
+			width: 150px;
+			text-align: right;
+		}
+
+		.pipe {
+			border-left: 1px solid $main-header-color;
+			height: 77px;
+			margin: 0 10px;
+		}
+
+		.nick {
+			width: 155px;
+			text-align: left;
+		}
+
+		.thin {
+			font-weight: lighter;
+			font-style: italic;
+		}
+
+		&:visited {
+			color: $main-header-color;
+		}
+
+		&:hover {
+			color: $main-header-highlight-color;
+		}
+	}
+}

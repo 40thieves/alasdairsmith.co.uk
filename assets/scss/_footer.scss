@@ -1,0 +1,27 @@
+footer {
+	position: relative;
+	padding: 1.7rem 0;
+	border-top: 1px solid $lighter-grey;
+	font-size: 0.7rem;
+	line-height: 1.5em;
+	color: $light-med-grey;
+	text-align: center;
+	background: $lightest-grey;
+	margin-top: 2rem;
+
+	a {
+		color: $light-med-grey;
+
+		&:hover {
+			color: $dark-grey;
+		}
+	}
+
+	.inner {
+		text-align: left;
+	}
+
+	.built-with {
+		font-size: 0.5rem;
+	}
+}

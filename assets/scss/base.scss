@@ -1,0 +1,76 @@
+html {
+	height: 100%;
+	max-height: 100%;
+}
+
+body {
+	font-family: $roboto;
+	font-size: 1rem;
+	line-height: 1.5em;
+	color: $dark-grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-rendering: optimiseLegibility;
+	line-height: 1;
+	margin-top: 0;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 1.2em;
+}
+
+h2 {
+	font-size: 1.7rem;
+	line-height: 1.2em;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.3rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-size: 1.05rem;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		color: $link-highlight-color;
+		text-decoration: none;
+	}
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+p, ul, ol {
+	margin: 1em 0;
+}
+
+ol ol, ul ul, ul ol, ol ul {
+	margin: 0.4em 0;
+}
+
+/////////////////////
+// GENERAL SPACING //
+/////////////////////
+
+.wrap {
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 0 2.5rem;
+}

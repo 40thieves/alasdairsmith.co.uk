@@ -11,6 +11,7 @@ var gulp = require('gulp')
 
 var sassFile = 'assets/scss/style.scss'
 ,	sassFiles = 'assets/scss/**.scss'
+,	destDir = 'assets/css'
 ;
 
 gulp.task('sass', function() {
@@ -19,10 +20,10 @@ gulp.task('sass', function() {
 	gulp.src(sassFile)
 		.pipe(sass({ style: 'expanded' }))
 			.pipe(autoprefixer('last 3 version', 'safari 5', 'ie 8', 'ie 9'))
-		.pipe(gulp.dest('assets/css'))
+		.pipe(gulp.dest(destDir))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifyCss())
-		.pipe(gulp.dest('assets/css'));
+		.pipe(gulp.dest(destDir));
 });
 
 gulp.task('watch', function() {

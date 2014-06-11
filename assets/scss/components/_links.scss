@@ -1,4 +1,8 @@
 .links {
+	ul {
+		padding: 0;
+	}
+
 	li {
 		list-style: none;
 		padding: 0;
@@ -40,8 +44,8 @@
 	@media only screen and (min-width: 768px) {
 		li {
 			float: left;
-			width: 30%;
-			margin: 1.2%;
+			width: 32%;
+			margin: 0 1%;
 		}
 
 		li:first-of-type, li:nth-of-type(3n+1) {
@@ -49,6 +53,25 @@
 		}
 
 		li:last-of-type, li:nth-of-type(3n) {
+			margin-right: 0;
+		}
+	}
+
+	@media only screen and (min-width: 1030px) {
+		li {
+			width: 16%;
+			margin: 0 0.4%;
+		}
+
+		li:nth-of-type(3n), li:nth-of-type(3n+1) {
+			margin: 0 0.4%;
+		}
+
+		li:first-of-type {
+			margin-left: 0;
+		}
+
+		li:last-of-type {
 			margin-right: 0;
 		}
 	}

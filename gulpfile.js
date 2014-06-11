@@ -10,7 +10,7 @@ var gulp = require('gulp')
 ;
 
 var sassFile = 'assets/scss/style.scss'
-,	sassFiles = 'assets/scss/**.scss'
+,	sassFiles = 'assets/scss/**/**.scss'
 ,	destDir = 'assets/css'
 ;
 

@@ -16,7 +16,11 @@
 		}
 
 		&#twitter {
-			background: transparentize($dark-purple, 0.8);
+			background: transparentize($light-blue, 0.8);
+		}
+
+		&#github {
+			background: transparentize($light-purple, 0.8);
 		}
 
 		&#delicious {

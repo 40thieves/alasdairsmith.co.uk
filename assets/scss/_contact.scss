@@ -1,0 +1,18 @@
+.contact {
+	.vcard {
+		background: $lightest-grey;
+		padding: 1px 15px;
+	}
+
+	h1 {
+		font-size: 1.7rem;
+	}
+
+	.photo, .nickname, .contact-url {
+		display: none;
+	}
+
+	.download {
+		font-size: 60%;
+	}
+}

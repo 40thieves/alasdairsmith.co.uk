@@ -45,4 +45,8 @@
 			color: $main-header-highlight-color;
 		}
 	}
+
+	@media only screen and (min-width: 768px) {
+		text-align: left;
+	}
 }

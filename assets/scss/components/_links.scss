@@ -1,4 +1,9 @@
 .links {
+	li {
+		list-style: none;
+		padding: 0;
+	}
+
 	a {
 		margin: 10px auto;
 		padding: 20px 0;
@@ -29,6 +34,22 @@
 
 		&#flickr {
 			background: transparentize($yellow, 0.8);
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		li {
+			float: left;
+			width: 30%;
+			margin: 1.2%;
+		}
+
+		li:first-of-type, li:nth-of-type(3n+1) {
+			margin-left: 0;
+		}
+
+		li:last-of-type, li:nth-of-type(3n) {
+			margin-right: 0;
 		}
 	}
 }

@@ -5,13 +5,19 @@ Author: Ali Smith (@40_thieves)
 
 @import "normalize";
 
-@import "vars";
+@import "mixins/vars";
+@import "mixins/mixins";
+
 @import "base";
 @import "contact";
 
-@import "color-bar";
-@import "logo";
-@import "avatar";
-@import "about";
-@import "links";
-@import "footer";
+@import "components/color-bar";
+@import "components/logo";
+@import "components/avatar";
+@import "components/about";
+@import "components/links";
+@import "components/footer";
+
+@media only screen and (min-width: 768px) {
+	@import "768up";
+}

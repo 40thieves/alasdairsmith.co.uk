@@ -5,6 +5,7 @@
 		display: block;
 		text-align: center;
 		font-size: 130%;
+		border: 1px solid $light-grey;
 
 		&#blog {
 			background: transparentize($light-green, 0.8);

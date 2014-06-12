@@ -2,19 +2,20 @@ footer {
 	position: relative;
 	padding: 1.7rem 0;
 	border-top: 1px solid $lighter-grey;
+	background: $lightest-grey;
+	margin-top: 2rem;
+	
 	font-size: 0.7rem;
 	line-height: 1.5em;
 	color: $light-med-grey;
 	text-align: center;
-	background: $lightest-grey;
-	margin-top: 2rem;
 
 	p {
 		margin: 0;
 	}
 
 	a {
-		color: $light-med-grey;
+		color: $med-grey;
 
 		&:hover {
 			color: $dark-grey;

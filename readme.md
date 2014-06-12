@@ -1,6 +1,6 @@
-## alasdairsmith.org.uk
+## alasdairsmith.co.uk
 
-My website, at [alasdairsmith.org.uk](http://alasdairsmith.org.uk)
+My website, at [alasdairsmith.co.uk](http://alasdairsmith.co.uk)
 
 ### License
 

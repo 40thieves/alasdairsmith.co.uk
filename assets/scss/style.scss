@@ -18,6 +18,10 @@ Author: Ali Smith (@40_thieves)
 @import "components/links";
 @import "components/footer";
 
+@media only screen and (min-width: 481px) {
+	@import "481up";
+}
+
 @media only screen and (min-width: 768px) {
 	@import "768up";
 }

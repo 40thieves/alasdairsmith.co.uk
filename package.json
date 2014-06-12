@@ -1,6 +1,6 @@
 {
   "name": "alasdairsmith_org_uk",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "description": "AlasdairSmith.co.uk/org.uk Website",
   "dependencies": {
     "gulp": "~3.6.2"

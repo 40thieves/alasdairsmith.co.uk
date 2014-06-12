@@ -1,3 +1,4 @@
 .DS_Store
 
-/labs
+/assets/css
+/node_modules

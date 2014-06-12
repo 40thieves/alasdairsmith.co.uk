@@ -1,6 +1,6 @@
 ## alasdairsmith.org.uk
 
-My extremely crappy (at the moment) website, at [alasdairsmith.org.uk](http://alasdairsmith.org.uk)
+My website, at [alasdairsmith.org.uk](http://alasdairsmith.org.uk)
 
 ### License
 

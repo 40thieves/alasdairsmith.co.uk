@@ -91,8 +91,10 @@
 </main>
 
 <footer role="contentinfo">
-	Content &copy; Alasdair Smith <?php echo (new DateTime)->format('Y'); ?>.
-	<a href="https://github.com/40thieves/alasdairsmith.org.uk">Code</a> released under an MIT license.
+	<div class="wrap wide clearfix">
+		<p>Content &copy; Alasdair Smith <?php echo (new DateTime)->format('Y'); ?>.</p>
+		<p><a href="https://github.com/40thieves/alasdairsmith.org.uk">Code</a> released under an MIT license.
+	</div>
 </footer>
 
 <script type="text/javascript" src="../assets/js/leet.js"></script>

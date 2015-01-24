@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>500 Server Error - Alasdair Smith | 40 Thieves</title>
+	<title>404 Not Found - Alasdair Smith | 40 Thieves</title>
 
 	<meta name="description" content="AlasdairSmith.co.uk/.org.uk is the website of Alasdair Smith, a full stack web developer working in Portsmouth, UK">
 	<meta name="author" content="Alasdair Smith">
@@ -46,17 +46,17 @@
 
 <main id="content" role="main" class="wrap clearfix">
 	<section>
-		<h1>Oh noes! 500 Error</h1>
+		<h1>Oh noes! 404 Error</h1>
 
-		<p>There was a server error.</p>
-		<p>Try again, or go <a href="/">home</a>.</p>
+		<p>Looks like the page you're looking for can't be found...</p>
+		<p>Would you like to go <a href="/">home</a>?</p>
 	</section>
 </main>
 
 <footer role="contentinfo">
 	<div class="wrap wide clearfix">
 		<p><a href="contact">Contact</a>
-		<p>Content &copy; Alasdair Smith 2014.</p>
+		<p>Content &copy; Alasdair Smith <?php echo (new DateTime)->format('Y'); ?>.</p>
 		<p><a href="https://github.com/40thieves/alasdairsmith.org.uk">Code</a> released under an MIT license.</p>
 	</div>
 </footer>

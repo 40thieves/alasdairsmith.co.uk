@@ -91,7 +91,7 @@
 </main>
 
 <footer role="contentinfo">
-	Content &copy; Alasdair Smith 2014.
+	Content &copy; Alasdair Smith <?php echo (new DateTime)->format('Y'); ?>.
 	<a href="https://github.com/40thieves/alasdairsmith.org.uk">Code</a> released under an MIT license.
 </footer>
 

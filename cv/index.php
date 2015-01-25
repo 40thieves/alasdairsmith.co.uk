@@ -98,6 +98,7 @@
 						and bug reports</li>
 						<li>Developing for a scaleable RESTful API with a command bus architecture</li>
 						<li>Using modern web technologies to develop a Javascript client</li>
+						<li>Assisted in server maintenence and devops</li>
 					</ul>
 				</div>
 			</div>

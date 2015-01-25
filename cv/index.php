@@ -219,6 +219,10 @@
 				</div>
 			</div>
 		</section>
+
+		<div class="last-updated">
+			<p>Last updated: <span>25th Jan 2015</span></p>
+		</div>
 	</article>
 </main>
 

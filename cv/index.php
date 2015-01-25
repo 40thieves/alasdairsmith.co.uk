@@ -70,18 +70,25 @@
 			<h1 class="section-head">Relevant Experience</h1>
 
 			<div class="experience" id="radweb-placement">
-				<h2 class="experience-head">Web Developer, Radweb Ltd.</h2>
+				<h2 class="experience-head">Web Developer (Industrial Placement), Radweb Ltd.</h2>
 				<p class="dates">June 2012 - July 2013</p>
+				<h2 class="experience-head">Web Developer, Radweb Ltd.</h2>
+				<p class="dates">July 2014 - Ongoing</p>
 
-				<p>Web Developer, working almost exclusively on InventoryBase.com, as part of my university industrial placement program. Took over as the lead web developer for the product. Application consists of a RESTful API, built using the FuelPHP framework and using a MySQL database, and a client side application, built using BackboneJS.</p>
+				<p>Initially employed as part of my university industrial placement, but offered 
+				a full time  position after graduating. Worked extensively on developing 
+				InventoryBase.com, a web application with a RESTful JSON API backed by a MySQL 
+				database, and a rich BackboneJS client. Currently working to scale and refactor 
+				the code with improved high-level architectures. Working within a small team 
+				as a lead on several projects.</p>
 
 				<div class="list">
 					<p>Experience gained:</p>
 					<ul>
-						<li>Developing new features for the application, including a customisable dictionary tool, task price prediction, a new calendar view and a clerk scheduler and availability tool</li>
+						<li>Leading development of new features for the web application, including a customisable dictionary tool, task price prediction, a new calendar view and a clerk scheduler and availability tool</li>
 						<li>Working with others in a software team, using git as a core workflow</li>
 						<li>Communicating with others to organise and prioritise feature requests and bug reports</li>
-						<li>Developing for a scaleable RESTful API with a MVC pattern</li>
+						<li>Developing for a scaleable RESTful API with a command bus architecture</li>
 						<li>Using modern web technologies to develop a Javascript client</li>
 					</ul>
 				</div>
@@ -110,7 +117,7 @@
 				<h2 class="experience-head">BSc Web Technologies, University of Portsmouth</h2>
 				<p class="dates">September 2010 - July 2014</p>
 
-				<p>Degree focused on technologies that underlie the modern web: Javascript, PHP, HTML, CSS, and databases as well as many other aspects of the computing. Subjects include Web Research; Enterprise Web Architectures; Data Warehousing and Mining; Databases; Web Scripting and Programming; Computer Graphics and Vision and Object Oriented Programming in Java. Produced a web-based visualisation tool enabling altmetrics researchers to study changes in scientific metrics as they change over time, as part of a final year project and dissertation.</p>
+				<p>Degree focused on technologies that underlie the modern web, as well as many other aspects of computing. Subjects include Web Research; Enterprise Web Architectures; Data Warehousing and Mining; Databases; Web Scripting and Programming; Computer Graphics and Vision and Object Oriented Programming in Java. Produced a web-based visualisation tool enabling altmetrics researchers to study changes in scientific metrics as they change over time, as part of a final year project and dissertation.</p>
 
 				<div class="list">
 					<p>Developed abilities to:</p>

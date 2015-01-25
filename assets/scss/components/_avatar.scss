@@ -3,14 +3,6 @@
 	position: relative;
 	margin: 25px auto;
 	
-	.avatar-wrapper::before {
-		position: absolute;
-		background-color: white;
-		content: '';
-		height: 150px;
-		width: 10px;
-	}
-	
 	img {
 		width: 150px;
 		height: 150px;
@@ -18,10 +10,6 @@
 	}
 	
 	@media only screen and (min-width: 770px) {
-		.avatar-wrapper::before {
-			height: 300px;
-		}
-
 		img {
 			width: 300px;
 			height: 300px;

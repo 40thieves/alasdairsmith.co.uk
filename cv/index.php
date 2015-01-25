@@ -85,6 +85,8 @@
 						<li>Leading development of new features for the web application, 
 						including a customisable dictionary tool, task price prediction, a new 
 						calendar view and a clerk scheduler and availability tool</li>
+						<li>Refactoring and rewriting a core part of the web application, 
+						working to optimise performance and maintainability</li>
 						<li>Working with others in a software team, using git as a core workflow</li>
 						<li>Communicating with others to organise and prioritise feature requests 
 						and bug reports</li>

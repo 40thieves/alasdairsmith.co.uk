@@ -92,7 +92,10 @@
 						and bug reports</li>
 						<li>Developing for a scaleable RESTful API with a command bus architecture</li>
 						<li>Using modern web technologies to develop a Javascript client</li>
-						<li>Assisted in server maintenence and devops</li>
+						<li>Assisted in server maintenance and devops</li>
+						<li>Working with a large, mission critical database</li>
+						<li>Working with a variety of open source libraries and plugins</li>
+						<li>Designing web pages with responsive design</li>
 					</ul>
 				</div>
 			</div>

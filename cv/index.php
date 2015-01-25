@@ -56,7 +56,12 @@
 		<h1 class="name">Alasdair Smith</h1>
 
 		<section class="intro">
-			<p>An enthusiastic and hard working Web Developer, with skills in Javascript, PHP, HTML, CSS, MySQL and server administration. Trusted member of a team in the workplace, with responsibilities ranging from developing feature requests and problem solving to health and safety management. Proficient in leadership and communication, with ability to work in a team and independently. Seeking a career in web development and changing the world at an exciting and forward thinking company.</p>
+			<p>An enthusiastic and hard working Web Developer, with skills in Javascript, PHP, 
+			HTML, CSS, MySQL and server administration. Trusted member of a team in the workplace, 
+			with responsibilities ranging from developing feature requests and problem solving to 
+			health and safety management. Proficient in leadership and communication, with ability 
+			to work in a team and independently. Seeking a career in web development and changing 
+			the world at an exciting and forward thinking company.</p>
 		</section>
 
 		<section class="contact">
@@ -85,9 +90,12 @@
 				<div class="list">
 					<p>Experience gained:</p>
 					<ul>
-						<li>Leading development of new features for the web application, including a customisable dictionary tool, task price prediction, a new calendar view and a clerk scheduler and availability tool</li>
+						<li>Leading development of new features for the web application, 
+						including a customisable dictionary tool, task price prediction, a new 
+						calendar view and a clerk scheduler and availability tool</li>
 						<li>Working with others in a software team, using git as a core workflow</li>
-						<li>Communicating with others to organise and prioritise feature requests and bug reports</li>
+						<li>Communicating with others to organise and prioritise feature requests 
+						and bug reports</li>
 						<li>Developing for a scaleable RESTful API with a command bus architecture</li>
 						<li>Using modern web technologies to develop a Javascript client</li>
 					</ul>
@@ -98,7 +106,9 @@
 				<h2 class="experience-head">Digital Fundraising Intern, British Red Cross</h2>
 				<p class="dates">March 2010 - June 2010</p>
 
-				<p>Worked as an Intern within the Digital Fundraising team. Focus of the work was maintaining and improving the donation section of the redcross.org.uk web site. Gained practical experience of working in a team and in the workplace.</p>
+				<p>Worked as an Intern within the Digital Fundraising team. Focus of the work was 
+				maintaining and improving the donation section of the redcross.org.uk web site. 
+				Gained practical experience of working in a team and in the workplace.</p>
 
 				<div class="list">
 					<p>Roles included:</p>
@@ -117,7 +127,13 @@
 				<h2 class="experience-head">BSc Web Technologies, University of Portsmouth</h2>
 				<p class="dates">September 2010 - July 2014</p>
 
-				<p>Degree focused on technologies that underlie the modern web, as well as many other aspects of computing. Subjects include Web Research; Enterprise Web Architectures; Data Warehousing and Mining; Databases; Web Scripting and Programming; Computer Graphics and Vision and Object Oriented Programming in Java. Produced a web-based visualisation tool enabling altmetrics researchers to study changes in scientific metrics as they change over time, as part of a final year project and dissertation.</p>
+				<p>Degree focused on technologies that underlie the modern web, as well as many 
+				other aspects of computing. Subjects include Web Research; Enterprise Web 
+				Architectures; Data Warehousing and Mining; Databases; Web Scripting and 
+				Programming; Computer Graphics and Vision and Object Oriented Programming in Java. 
+				Produced a web-based visualisation tool enabling altmetrics researchers to study 
+				changes in scientific metrics as they change over time, as part of a final year 
+				project and dissertation.</p>
 
 				<div class="list">
 					<p>Developed abilities to:</p>
@@ -135,13 +151,16 @@
 				<h2 class="experience-head">BSc Biochemistry, Cardiff University</h2>
 				<p class="dates">September 2007 - June 2009</p>
 
-				<p>Developed a firm foundation of knowledge of many aspects of the Biosciences. Subjects included genetics, micro-organisms,  cell biology, metabolism and physiology. Left after two years to pursue an interest in Computing.</p>
+				<p>Developed a firm foundation of knowledge of many aspects of the Biosciences. 
+				Subjects included genetics, micro-organisms,  cell biology, metabolism and 
+				physiology. Left after two years to pursue an interest in Computing.</p>
 
 				<div class="list">
 					<p>Developed skills to:</p>
 					<ul>
 						<li>Research and test a hypothesis thoroughly</li>
-						<li>Work independently, setting deadlines and managing time when under pressure</li>
+						<li>Work independently, setting deadlines and managing time when under 
+						pressure</li>
 					</ul>
 				</div>
 			</div>
@@ -151,12 +170,17 @@
 			<h1 class="section-head">Additional Experience</h1>
 
 			<div class="experience" id="kisc">
-				<h2 class="experience-head">Short Term Staff Hike Guide, Kandersteg International Scout Centre</h2>
+				<h2 class="experience-head">Short Term Staff Hike Guide, Kandersteg International 
+				Scout Centre</h2>
 				<p class="dates">June 2010 - September 2010</p>
-				<h2 class="experience-head">Snow &amp; Ice Guide, Kandersteg International Scout Centre</h2>
+				<h2 class="experience-head">Snow &amp; Ice Guide, Kandersteg International Scout 
+				Centre</h2>
 				<p class="dates">June 2011 - September 2011</p>
 
-				<p>Volunteer, working as a Hike guide and a Mountaineering instructor as part of a large international team. Role involved taking groups of Scouts (aged between 10 and 18) hiking around the Swiss Alps, often included an overnight stay in a mountain hut. The role also included serving guests at the reception and working on the campsite.</p>
+				<p>Volunteer, working as a Hike guide and a Mountaineering instructor as part of a 
+				large international team. Role involved taking groups of Scouts (aged between 10 and 
+				18) hiking around the Swiss Alps, often included an overnight stay in a mountain hut. 
+				The role also included serving guests at the reception and working on the campsite.</p>
 
 				<div class="list">
 					<p>Gained experience of:</p>
@@ -165,7 +189,8 @@
 						<li>Problem solving and using initiative in remote surroundings</li>
 						<li>Management in extreme environments</li>
 						<li>Team - working skills in a busy work environment</li>
-						<li>Dealing with customers in a friendly and professional manner at the reception</li>
+						<li>Dealing with customers in a friendly and professional manner at the 
+						reception</li>
 					</ul>
 				</div>
 			</div>
@@ -196,10 +221,13 @@
 
 				<div class="list unindented">
 					<ul>
-						<li>Assistant Cub leader (age-group: 8-10) and Assistant Scout leader (age-group: 10-14).</li>
-						<li>Involved in regularly in weekly meetings, running activities and passing on knowledge.</li>
+						<li>Assistant Cub leader (age-group: 8-10) and Assistant Scout leader 
+						(age-group: 10-14).</li>
+						<li>Involved in regularly in weekly meetings, running activities and 
+						passing on knowledge.</li>
 						<li>Organised summer camps, meetings and special activities.</li>
-						<li>Working to complete a walking leadership qualification to lead Scout groups on mountains.</li>
+						<li>Working to complete a walking leadership qualification to lead Scout 
+						groups on mountains.</li>
 					</ul>
 				</div>
 			</div>
@@ -210,7 +238,8 @@
 				<div class="list unindented">
 					<ul>
 						<li>Have been skiing for more than 10 years visiting the Alps many times.</li>
-						<li>Have been hiking many times in the UK and in Europe. Completed the Three Peaks Challenge.</li>
+						<li>Have been hiking many times in the UK and in Europe. Completed the 
+						Three Peaks Challenge.</li>
 						<li>Enjoy mountaineering and climbing.</li>
 					</ul>
 				</div>
@@ -221,7 +250,8 @@
 
 				<div class="list unindented">
 					<ul>
-						<li>Started playing Ultimate Frisbee at university, and played in several tournaments.</li>
+						<li>Started playing Ultimate Frisbee at university, and played in several 
+						tournaments.</li>
 					</ul>
 				</div>
 			</div>

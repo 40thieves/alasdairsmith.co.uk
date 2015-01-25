@@ -56,12 +56,12 @@
 		<h1 class="name">Alasdair Smith</h1>
 
 		<section class="intro">
-			<p>An enthusiastic and hard working Web Developer, with skills in Javascript, PHP, 
+			<p>An enthusiastic and hard working web developer, with skills in Javascript, PHP, 
 			HTML, CSS, MySQL and server administration. Trusted member of a team in the workplace, 
 			with diverse responsibilities ranging from developing feature requests and problem 
 			solving to risk management. Proficient in leadership and communication, 
 			with ability to work in a team and independently. Seeking a career in web development 
-			and at an exciting and forward thinking company.</p>
+			at an exciting and forward thinking company.</p>
 		</section>
 
 		<section class="contact">

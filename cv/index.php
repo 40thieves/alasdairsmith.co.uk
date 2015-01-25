@@ -43,20 +43,12 @@
 			<span class="nick">40 <span class="thin caps">Thieves</span></span>
 		</a>
 	</h1>
-
-	<div id="avatar" class="wrap avatar">
-		<div class="avatar-wrapper">
-			<img src="../assets/img/avatar.jpg" alt="Alasdair Smith">
-		</div>
-	</div>
 </header>
 
 <main class="content wrap" role="main">
 	<article class="cv">
-		<h1 class="name">Alasdair Smith</h1>
-
 		<section class="intro">
-			<p>An enthusiastic and hard working web developer, with skills in Javascript, PHP, 
+			<p>An enthusiastic and hard working full stack web developer, with skills in Javascript, PHP, 
 			HTML, CSS, MySQL and server administration. Trusted member of a team in the workplace, 
 			with diverse responsibilities ranging from developing feature requests and problem 
 			solving to risk management. Proficient in leadership and communication, 
@@ -83,7 +75,7 @@
 				<p>Initially employed as part of my university industrial placement, but offered 
 				a full time  position after graduating. Worked extensively on developing 
 				InventoryBase.com, a web application with a RESTful JSON API backed by a MySQL 
-				database, and a rich BackboneJS client. Currently working to scale and refactor 
+				database, with a rich Backbone client. Currently working to scale and refactor 
 				the code with improved high-level architectures. Working within a small team 
 				as a lead on several projects.</p>
 
@@ -102,39 +94,22 @@
 					</ul>
 				</div>
 			</div>
-
-			<div class="experience" id="british-red-cross">
-				<h2 class="experience-head">Digital Fundraising Intern, British Red Cross</h2>
-				<p class="dates">March 2010 - June 2010</p>
-
-				<p>Worked as an Intern within the Digital Fundraising team. Focus of the work was 
-				maintaining and improving the donation section of the redcross.org.uk web site. 
-				Gained practical experience of working in a team and in the workplace.</p>
-
-				<div class="list">
-					<p>Roles included:</p>
-					<ul>
-						<li>Conducting usability study on competitor charity web sites</li>
-						<li>Search optimisation using Google Analytics</li>
-					</ul>
-				</div>
-			</div>
 		</section>
 
 		<section class="education">
 			<h1 class="section-head">Education</h1>
 
 			<div class="experience" id="portsmouth">
-				<h2 class="experience-head">BSc Web Technologies, University of Portsmouth</h2>
+				<h2 class="experience-head">BSc Web Technologies (First Class), University of Portsmouth</h2>
 				<p class="dates">September 2010 - July 2014</p>
 
-				<p>Degree focused on technologies that underlie the modern web, as well as many 
-				other aspects of computing. Subjects include Web Research; Enterprise Web 
-				Architectures; Data Warehousing and Mining; Databases; Web Scripting and 
-				Programming; Computer Graphics and Vision and Object Oriented Programming in Java. 
-				Produced a web-based visualisation tool enabling researchers to study changes 
-				in scientific metrics as they change over time, as part of a final year project 
-				and dissertation.</p>
+				<p>First Class degree which focused on technologies that underlie the modern web, 
+				as well as many other aspects of computing. Subjects include Web Research; 
+				Enterprise Web Architectures; Data Warehousing and Mining; Databases; Web Scripting 
+				and Programming; Computer Graphics and Vision and Object Oriented Programming in 
+				Java. Produced a web-based visualisation tool enabling researchers to study changes 
+				in scientific metrics as they change over time, part of a final year project, 
+				which won a Best Information Systems Project prize.</p>
 
 				<div class="list">
 					<p>Developed abilities to:</p>
@@ -149,7 +124,7 @@
 			</div>
 
 			<div class="experience" id="cardiff">
-				<h2 class="experience-head">BSc Biochemistry, Cardiff University</h2>
+				<h2 class="experience-head">Biochemistry (Years 1 &amp; 2), Cardiff University</h2>
 				<p class="dates">September 2007 - June 2009</p>
 
 				<p>Developed a firm foundation of knowledge of many aspects of the Biosciences. 
@@ -170,12 +145,29 @@
 		<section class="additional-experience">
 			<h1 class="section-head">Additional Experience</h1>
 
+			<div class="experience" id="british-red-cross">
+				<h2 class="experience-head">Digital Fundraising Intern, British Red Cross</h2>
+				<p class="dates">March 2010 - June 2010</p>
+
+				<p>Worked as an Intern within the Digital Fundraising team. Focus of the work was 
+				maintaining and improving the donation section of the redcross.org.uk web site. 
+				Gained practical experience of working in a team and in the workplace.</p>
+
+				<div class="list">
+					<p>Roles included:</p>
+					<ul>
+						<li>Conducting usability study on competitor charity web sites</li>
+						<li>Search optimisation using Google Analytics</li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="experience" id="kisc">
-				<h2 class="experience-head">Short Term Staff Hike Guide, Kandersteg International 
-				Scout Centre</h2>
+				<h2 class="experience-head">Summer Hike Guide, Kandersteg International 
+				Scout Centre, Switzerland</h2>
 				<p class="dates">June 2010 - September 2010</p>
 				<h2 class="experience-head">Snow &amp; Ice Guide, Kandersteg International Scout 
-				Centre</h2>
+				Centre, Switzerland</h2>
 				<p class="dates">June 2011 - September 2011</p>
 
 				<p>Volunteer, working as a Hike guide and a Mountaineering instructor as part of a 

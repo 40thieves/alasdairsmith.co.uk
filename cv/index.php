@@ -72,7 +72,7 @@
 		</section>
 
 		<section class="relevant-experience">
-			<h1 class="section-head">Relevant Experience</h1>
+			<h1 class="section-head">Experience</h1>
 
 			<div class="experience" id="radweb-placement">
 				<h2 class="experience-head">Web Developer (Industrial Placement), Radweb Ltd.</h2>

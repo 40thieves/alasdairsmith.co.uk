@@ -1,0 +1,78 @@
+.cv {
+	& > section {
+		margin-bottom: 3em;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.intro {
+		margin-bottom: 1em;
+	}
+
+	.section-head {
+		font-size: 1.4rem;
+		line-height: 1.4em;
+		margin-bottom: 0.8em;
+	}
+
+	.contact {
+		p {
+			margin: 0.2em 0;
+		}
+	}
+
+	.experience {
+		margin: 1.2em 0 2.4em;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		h2 {
+			font-size: 1.15rem;
+			font-weight: bold;
+			line-height: 1em;
+			margin: 0.2em 0;
+		}
+
+		.dates {
+			margin: 0.2em 0 0.8em;
+			font-size: 0.85rem;
+		}
+
+		p {
+			margin: 0.5em 0;
+		}
+	}
+
+	.list {
+		p {
+			margin-bottom: 0.2em;
+		}
+
+		ul {
+			margin: 0;
+			list-style: none;
+			padding-left: 20px;
+		}
+
+		&.unindented ul {
+			padding-left: 0;
+		}
+
+		li {
+			margin: 0.3em 0;
+		}
+	}
+
+	.last-updated {
+		font-size: 0.7rem;
+		margin-top: 2.4em;
+
+		span {
+			font-weight: bold;
+		}
+	}
+}

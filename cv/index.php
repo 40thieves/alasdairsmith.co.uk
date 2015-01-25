@@ -132,9 +132,9 @@
 				other aspects of computing. Subjects include Web Research; Enterprise Web 
 				Architectures; Data Warehousing and Mining; Databases; Web Scripting and 
 				Programming; Computer Graphics and Vision and Object Oriented Programming in Java. 
-				Produced a web-based visualisation tool enabling altmetrics researchers to study 
-				changes in scientific metrics as they change over time, as part of a final year 
-				project and dissertation.</p>
+				Produced a web-based visualisation tool enabling researchers to study changes 
+				in scientific metrics as they change over time, as part of a final year project 
+				and dissertation.</p>
 
 				<div class="list">
 					<p>Developed abilities to:</p>

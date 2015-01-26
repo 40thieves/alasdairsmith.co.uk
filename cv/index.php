@@ -250,7 +250,7 @@
 					<ul>
 						<li>Participated in three Pub Hacks, building applications in less than 12 
 						hours based on a theme.</li>
-						<li>Won "Most Likely To Commerically Succeed" and "Best Technology" 
+						<li>Won "Most Likely To Commercially Succeed" and "Best Technology" 
 						prizes.</li>
 					</ul>
 				</div>

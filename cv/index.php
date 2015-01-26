@@ -243,6 +243,19 @@
 				</div>
 			</div>
 
+			<div class="experience" id="hackathons">
+				<h2 class="experience-head">Hackathons</h2>
+
+				<div class="list unindented">
+					<ul>
+						<li>Participated in three Pub Hacks, building applications in 12 hours 
+						based on a theme.</li>
+						<li>Won "Most Likely To Commerically Succeed" and "Best Technology" 
+						prizes.</li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="experience" id="ultimate">
 				<h2 class="experience-head">Ultimate Frisbee</h2>
 

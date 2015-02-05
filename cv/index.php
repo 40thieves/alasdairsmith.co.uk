@@ -67,10 +67,10 @@
 			<h1 class="section-head">Experience</h1>
 
 			<div class="experience" id="radweb-placement">
-				<h2 class="experience-head">Web Developer (Industrial Placement), Radweb Ltd.</h2>
-				<p class="dates">June 2012 - July 2013</p>
 				<h2 class="experience-head">Web Developer, Radweb Ltd.</h2>
 				<p class="dates">July 2014 - Ongoing</p>
+				<h2 class="experience-head">Web Developer (Industrial Placement), Radweb Ltd.</h2>
+				<p class="dates">June 2012 - July 2013</p>
 
 				<p>Initially employed as part of my university industrial placement, but offered 
 				a full time  position after graduating. Worked extensively on developing 

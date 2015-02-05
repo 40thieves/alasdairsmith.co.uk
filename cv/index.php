@@ -52,8 +52,8 @@
 			HTML, CSS, MySQL and server administration. Trusted member of a team in the workplace, 
 			with diverse responsibilities ranging from developing feature requests and problem 
 			solving to risk management. Proficient in leadership and communication, 
-			with ability to work in a team and independently. Seeking a career in web development 
-			at an exciting and forward thinking company.</p>
+			with ability to work in a team and independently. Seeking to further my career in web 
+			development at an exciting and forward thinking company.</p>
 		</section>
 
 		<section class="contact">

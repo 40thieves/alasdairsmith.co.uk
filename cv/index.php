@@ -58,7 +58,7 @@
 
 		<section class="contact">
 			<p class="web"><a href="http://alasdairsmith.co.uk">alasdairsmith.co.uk</a></p>
-			<p class="email"><a href="mailto:alasdairsmith100@gmail.com">alasdairsmith100@gmail.com</a></p>
+			<p class="email"><a href="mailto:ali@alasdairsmith.co.uk">ali@alasdairsmith.co.uk</a></p>
 			<p class="address">8 Summit Close, Finchampstead, Wokingham, Berks, RG40 3LH</p>
 			<p class="phone">07952 111281</p>
 		</section>

@@ -188,7 +188,7 @@
 						<li>Leadership and communication skills</li>
 						<li>Problem solving and using initiative in remote surroundings</li>
 						<li>Management in extreme environments</li>
-						<li>Team - working skills in a busy work environment</li>
+						<li>Team-working skills in a busy work environment</li>
 						<li>Dealing with customers in a friendly and professional manner at the 
 						reception</li>
 					</ul>

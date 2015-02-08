@@ -93,7 +93,7 @@
 						<li>Using automated testing to develop and improve code</li>
 						<li>Developing for a scaleable RESTful API with a command bus architecture</li>
 						<li>Using modern web technologies to develop a Javascript client</li>
-						<li>Assisted in server maintenance and devops, and used Ansible to test 
+						<li>Assisted in server maintenance and devops, and using Ansible to test 
 						and deploy web applications</li>
 						<li>Working with a large, mission critical database</li>
 						<li>Working with a variety of open source libraries and plugins</li>

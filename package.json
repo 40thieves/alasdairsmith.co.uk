@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "AlasdairSmith.co.uk/org.uk Website",
   "dependencies": {
-    "gulp": "~3.6.2"
+    "gulp": "~3.8"
   },
   "devDependencies": {
     "gulp-rename": "~1.2.0",

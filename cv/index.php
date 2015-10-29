@@ -250,7 +250,7 @@
 
 				<div class="list unindented">
 					<ul>
-						<li>Participated in three Pub Hacks, building applications in less than 12 
+						<li>Participated in four Pub Hacks, building applications in less than 12 
 						hours based on a theme.</li>
 						<li>Won "Most Likely To Commercially Succeed" and "Best Technology" 
 						prizes.</li>
@@ -271,7 +271,7 @@
 		</section>
 
 		<div class="last-updated">
-			<p>Last updated: <span>25th Jan 2015</span></p>
+			<p>Last updated: <span>29th Oct 2015</span></p>
 		</div>
 	</article>
 </main>

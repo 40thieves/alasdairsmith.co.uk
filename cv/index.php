@@ -48,7 +48,7 @@
 <main class="content wrap" role="main">
 	<article class="cv">
 		<section class="intro">
-			<p>An enthusiastic and hard working full stack/back end web developer, with skills in 
+			<p>An enthusiastic and hard working full stack web developer, with skills in 
 			Javascript, PHP, HTML, CSS, MySQL and server administration. Trusted member of a team 
 			in the workplace, with diverse responsibilities ranging from developing feature requests 
 			and problem solving to risk management. Proficient in leadership and communication, 

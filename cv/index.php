@@ -74,10 +74,10 @@
 
 				<p>Initially employed as part of my university industrial placement, but offered 
 				a full time  position after graduating. Worked extensively on developing 
-				InventoryBase.com, a web application with a RESTful JSON API backed by a MySQL 
-				database, with a rich Backbone client. Currently working to scale and refactor 
-				the code with improved high-level architectures. Working within a small team 
-				as a lead on several projects.</p>
+				InventoryBase.com, a web application with a RESTful JSON API built with Laravel 
+				PHP components, backed by a MySQL database, with a rich Backbone.js client. 
+				Currently working to scale and refactor the code with improved high-level 
+				architectures. Working within a small team as a lead on several projects.</p>
 
 				<div class="list">
 					<p>Experience gained:</p>
@@ -179,7 +179,7 @@
 
 				<p>Volunteer, working as a Hike guide and a Mountaineering instructor as part of a 
 				large international team. Role involved taking groups of Scouts (aged between 10 and 
-				18) hiking around the Swiss Alps, often included an overnight stay in a mountain hut. 
+				18) hiking around the Swiss Alps, often including an overnight stay in a mountain hut. 
 				The role also included serving guests at the reception and working on the campsite.</p>
 
 				<div class="list">

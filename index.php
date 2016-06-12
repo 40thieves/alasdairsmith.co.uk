@@ -64,8 +64,6 @@
 			<li><a href="mailto:alasdairsmith100@gmail.com" id="email">Email</a></li>
 			<li><a href="http://twitter.com/40_thieves" id="twitter" rel="me">Twitter</a></li>
 			<li><a href="https://github.com/40thieves" id="github" rel="me">Github</a></li>
-			<li><a href="http://www.delicious.com/40_thieves" id="delicious" rel="me">Delicious</a></li>
-			<li><a href="http://www.flickr.com/photos/40_thieves/" id="flickr" rel="me">Flickr</a></li>
 		</ul>
 	</nav>
 </main>

@@ -20,6 +20,7 @@
 	<!-- Check the Github: https://github.com/40thieves/alasdairsmith.org.uk -->
 	<!-- Or have some questions? alasdairsmith100 [at] gmail [dot] com -->
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header id="banner" role="banner">

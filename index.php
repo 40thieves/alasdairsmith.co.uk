@@ -53,9 +53,9 @@
 
 <main id="content" role="main" class="wrap clearfix">
 	<section class="about">
-		<p>Hi, I'm Alasdair Smith, although I usually go by Ali, and I'm a web developer working in Portsmouth, UK.</p>
+		<p>Hi, I'm Alasdair Smith, although I usually go by Ali, and I'm a web developer working in London, UK.</p>
 
-		<p>I'm interested in the web, specialising in Javascript and PHP, and advocating for open science, especially for altmetrics. I enjoy watching F1, Scouting, hiking, camping and playing Ultimate.</p>
+		<p>I'm a web developer for <a href="https://www.overleaf.com">Overleaf</a>, specialising in Javascript and PHP, and advocating for open science, especially for altmetrics. I enjoy watching F1, Scouting, hiking, camping and playing Ultimate.</p>
 	</section>
 
 	<nav class="links">

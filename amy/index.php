@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Contact - Alasdair Smith | 40 Thieves</title>
+	<title>Amy</title>
 
 	<meta name="description" content="AlasdairSmith.co.uk/.org.uk is the website of Alasdair Smith, a full stack web developer working in Portsmouth, UK">
 	<meta name="author" content="Alasdair Smith">

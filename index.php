@@ -56,7 +56,7 @@
 	<section class="about">
 		<p>Hi, I'm Alasdair Smith, although I usually go by Ali, and I'm a web developer working in London, UK.</p>
 
-		<p>I'm a web developer for <a href="https://www.overleaf.com">Overleaf</a>, specialising in Javascript and PHP, and advocating for open science, especially for altmetrics. I enjoy watching F1, Scouting, hiking, camping and playing Ultimate.</p>
+		<p>I'm a web developer for <a href="https://www.overleaf.com">Overleaf</a>, specialising in frontend, and advocating for open science. I mentor at <a href="https://codeyourfuture.io/">CodeYourFuture</a>. I enjoy watching F1, Scouting, hiking, camping and playing Ultimate.</p>
 	</section>
 
 	<nav class="links">

@@ -1,0 +1,43 @@
+{
+  "lang": "en",
+  "short_name": "Alasdair",
+  "name": "Alasdair Smith",
+  "description": "Alasdair Smith is a web developer based in London",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "icons": [{
+    "src": "/assets/img/photo-150.jpg",
+    "sizes": "150x150",
+    "type": "image/jpeg"
+  }, {
+    "src": "/assets/img/photo-192.jpg",
+    "sizes": "192x192",
+    "type": "image/jpeg"
+  }, {
+    "src": "/assets/img/photo-200.jpg",
+    "sizes": "200x200",
+    "type": "image/jpeg"
+  }, {
+    "src": "/assets/img/photo-300.jpg",
+    "sizes": "300x300",
+    "type": "image/jpeg"
+  }, {
+    "src": "/assets/img/photo-500.jpg",
+    "sizes": "500x500",
+    "type": "image/jpeg"
+  }, {
+    "src": "/assets/img/photo-512.jpg",
+    "sizes": "512x512",
+    "type": "image/jpeg"
+  }, {
+    "src": "/assets/img/photo-600.jpg",
+    "sizes": "600x600",
+    "type": "image/jpeg"
+  }, {
+    "src": "/apple-touch-icon.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }]
+}

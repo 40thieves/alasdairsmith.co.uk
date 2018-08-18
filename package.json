@@ -2,9 +2,6 @@
   "name": "alasdairsmith_org_uk",
   "version": "2.0.0",
   "description": "AlasdairSmith.co.uk/org.uk Website",
-  "dependencies": {
-    "gulp": "~3.8"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/40thieves/alasdairsmith.org.uk"
@@ -21,7 +18,7 @@
   },
   "homepage": "https://github.com/40thieves/alasdairsmith.org.uk",
   "devDependencies": {
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.10",
     "gulp-rename": "^1.2.2",

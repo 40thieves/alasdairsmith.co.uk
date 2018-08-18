@@ -23,7 +23,7 @@
 	<!-- Want a nicely formatted repo? -->
 	<!-- Check the Github: https://github.com/40thieves/alasdairsmith.org.uk -->
 	<!-- Or have some questions? alasdairsmith100 [at] gmail [dot] com -->
-	<link rel="stylesheet" href="assets/css/style.min.css">
+	<link rel="stylesheet" href="/assets/css/style.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -51,7 +51,7 @@
 
 	<div id="avatar" class="avatar wrap">
 		<div class="avatar-wrapper">
-			<img src="assets/img/photo-600.jpg" alt="Alasdair Smith">
+			<img src="/assets/img/photo-600.jpg" alt="Alasdair Smith">
 		</div>
 	</div>
 </header>
@@ -75,17 +75,17 @@
 
 <footer role="contentinfo">
 	<div class="wrap wide clearfix">
-		<p><a href="contact">Contact</a>
+		<p><a href="/contact">Contact</a>
 		<p>Content &copy; Alasdair Smith <?php echo (new DateTime)->format('Y'); ?>.</p>
 		<p><a href="https://github.com/40thieves/alasdairsmith.org.uk">Code</a> released under an MIT license.</p>
 	</div>
 </footer>
 
-<script type="text/javascript" src="assets/js/leet.js"></script>
+<script type="text/javascript" src="/assets/js/leet.js"></script>
 <script>
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function() {
-			navigator.serviceWorker.register('sw.js')
+			navigator.serviceWorker.register('/sw.js')
 		})
 	}
 </script>

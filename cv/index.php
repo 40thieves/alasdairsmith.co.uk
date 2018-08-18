@@ -6,20 +6,24 @@
 
 	<title>CV - Alasdair Smith | 40 Thieves</title>
 
-	<meta name="description" content="AlasdairSmith.co.uk/.org.uk is the website of Alasdair Smith, a full stack web developer working in Portsmouth, UK">
+	<meta name="description" content="Alasdair Smith is a web developer based in London">
 	<meta name="author" content="Alasdair Smith">
 
 	<link rel="author" href="humans.txt">
 
-	<link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png">
-	<link rel="shortcut icon apple-touch-icon" type="image/png" href="../assets/img/favicon-300.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png">
+	<link rel="shortcut icon" href="/icon.png" sizes="300x300" type="image/png">
+	<link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
+	<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/manifest.json">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Want a nicely formatted repo? -->
 	<!-- Check the Github: https://github.com/40thieves/alasdairsmith.org.uk -->
 	<!-- Or have some questions? alasdairsmith100 [at] gmail [dot] com -->
-	<link rel="stylesheet" href="../assets/css/style.min.css">
+	<link rel="stylesheet" href="/assets/css/style.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -279,16 +283,17 @@
 
 <footer role="contentinfo">
 	<div class="wrap wide clearfix">
+		<p><a href="/contact">Contact</a>
 		<p>Content &copy; Alasdair Smith <?php echo (new DateTime)->format('Y'); ?>.</p>
 		<p><a href="https://github.com/40thieves/alasdairsmith.org.uk">Code</a> released under an MIT license.
 	</div>
 </footer>
 
-<script type="text/javascript" src="../assets/js/leet.js"></script>
+<script type="text/javascript" src="/assets/js/leet.js"></script>
 <script>
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function() {
-			navigator.serviceWorker.register('assets/js/sw.js')
+			navigator.serviceWorker.register('/sw.js')
 		})
 	}
 </script>

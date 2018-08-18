@@ -19,7 +19,7 @@
 	<!-- Want a nicely formatted repo? -->
 	<!-- Check the Github: https://github.com/40thieves/alasdairsmith.org.uk -->
 	<!-- Or have some questions? alasdairsmith100 [at] gmail [dot] com -->
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -78,5 +78,12 @@
 </footer>
 
 <script type="text/javascript" src="assets/js/leet.js"></script>
+<script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('assets/js/sw.js')
+		})
+	}
+</script>
 </body>
 </html>

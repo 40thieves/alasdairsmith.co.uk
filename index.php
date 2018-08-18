@@ -6,13 +6,16 @@
 
 	<title>Alasdair Smith | 40 Thieves</title>
 
-	<meta name="description" content="AlasdairSmith.co.uk/.org.uk is the website of Alasdair Smith, a full stack web developer working in Portsmouth, UK">
+	<meta name="description" content="Alasdair Smith is a web developer based in London">
 	<meta name="author" content="Alasdair Smith">
 
 	<link rel="author" href="humans.txt">
 
-	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
-	<link rel="shortcut icon apple-touch-icon" type="image/png" href="assets/img/favicon-300.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png">
+	<link rel="shortcut icon" href="/icon.png" sizes="300x300" type="image/png">
+	<link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
+	<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -47,7 +50,7 @@
 
 	<div id="avatar" class="avatar wrap">
 		<div class="avatar-wrapper">
-			<img src="assets/img/avatar.jpg" alt="Alasdair Smith">
+			<img src="assets/img/photo-600.jpg" alt="Alasdair Smith">
 		</div>
 	</div>
 </header>

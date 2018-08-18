@@ -29,11 +29,15 @@ gulp.task('sass', function() {
 
 gulp.task('service-worker', function() {
 	return workboxBuild.generateSW({
-		globDirectory: 'assets',
+		globDirectory: '.',
 		globPatterns: [
-			'**\/*.{js,min\.css,jpg,png}'
+			'**/*.{js,min.css,jpg,png}',
 		],
-		swDest: 'assets/js/sw.js'
+		globIgnores: [
+			'node_modules/**/*',
+			'gulpfile.js'
+		],
+		swDest: 'sw.js'
 	})
 })
 

@@ -1,6 +1,5 @@
 /* TEAM */
 
 Developer: Alasdair Smith (well, duh)
-Contact: alasdairsmith100 [at] gmail.com
-Twitter: @40_thieves
-From: Wokingham/Portsmouth, UK
+Contact: ali [at] alasdairsmith.co.uk
+From: London

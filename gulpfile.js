@@ -5,6 +5,7 @@ var gulp = require('gulp')
 ,	sass = require('gulp-sass')
 ,	minifyCss = require('gulp-clean-css')
 ,	autoprefixer = require('gulp-autoprefixer')
+,	workboxBuild = require('workbox-build')
 
 ,	log = util.log
 ;
@@ -25,6 +26,16 @@ gulp.task('sass', function() {
 		.pipe(minifyCss())
 		.pipe(gulp.dest(destDir));
 });
+
+gulp.task('service-worker', function() {
+	return workboxBuild.generateSW({
+		globDirectory: 'assets',
+		globPatterns: [
+			'**\/*.{js,min\.css,jpg,png}'
+		],
+		swDest: 'assets/js/sw.js'
+	})
+})
 
 gulp.task('watch', function() {
 	log('Watching scss files for modifications');

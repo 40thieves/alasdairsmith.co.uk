@@ -25,7 +25,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/css/style.min.css",
-    "revision": "544b4022c3e92aaa0f852cd4dd301d06"
+    "revision": "00203974fa6a410bf5a4c467cf26fb71"
   },
   {
     "url": "assets/img/photo-150.jpg",
@@ -79,4 +79,4 @@ self.__precacheManifest = [
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/, workbox.strategies.cacheFirst({ cacheName: "google-fonts", plugins: [new workbox.expiration.Plugin({"maxEntries":10,"purgeOnQuotaError":false}), new workbox.cacheableResponse.Plugin({"statuses":[0,200]})] }), 'GET');
+workbox.routing.registerRoute(/https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/, workbox.strategies.cacheFirst({ cacheName: "google-fonts", plugins: [new workbox.expiration.Plugin({"maxEntries":30,"purgeOnQuotaError":false}), new workbox.cacheableResponse.Plugin({"statuses":[0,200]})] }), 'GET');

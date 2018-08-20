@@ -8,6 +8,7 @@
 
 	<meta name="description" content="Alasdair Smith is a web developer based in London">
 	<meta name="author" content="Alasdair Smith">
+	<meta name="theme-color" content="#ffffff" />
 
 	<link rel="author" href="humans.txt">
 

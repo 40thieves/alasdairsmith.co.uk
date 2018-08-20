@@ -5,7 +5,6 @@
   "description": "Alasdair Smith is a web developer based in London",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "start_url": "/",
   "display": "minimal-ui",
   "icons": [{
     "src": "/assets/img/photo-150.jpg",

@@ -86,6 +86,12 @@
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function() {
 			navigator.serviceWorker.register('/sw.js')
+				.then(function() {
+					console.log('SW registration successful')
+				})
+				.catch(function() {
+					console.log('SW registration error')
+				})
 		})
 	}
 </script>

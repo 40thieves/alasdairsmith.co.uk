@@ -37,7 +37,20 @@ gulp.task('service-worker', function() {
 			'node_modules/**/*',
 			'gulpfile.js'
 		],
-		swDest: 'sw.js'
+		swDest: 'sw.js',
+		runtimeCaching: [{
+			urlPattern: new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
+			handler: 'cacheFirst',
+			options: {
+				cacheName: 'google-fonts',
+				expiration: {
+					maxEntries: 30
+				},
+				cacheableResponse: {
+					statuses: [0, 200]
+				}
+			}
+		}]
 	})
 })
 

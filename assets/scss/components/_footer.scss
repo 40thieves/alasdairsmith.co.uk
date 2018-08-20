@@ -7,7 +7,7 @@ footer {
 	
 	font-size: 0.7rem;
 	line-height: 1.5em;
-	color: $light-med-grey;
+	color: $footer-color;
 	text-align: center;
 
 	p {
@@ -15,11 +15,7 @@ footer {
 	}
 
 	a {
-		color: $med-grey;
-
-		&:hover {
-			color: $dark-grey;
-		}
+		color: $black;
 	}
 
 	.inner {

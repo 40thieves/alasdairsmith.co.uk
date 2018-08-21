@@ -24,7 +24,7 @@ gulp.task('hbs', function () {
 gulp.task('sass', function() {
 	log('Generate CSS files ' + (new Date()).toString());
 
-	var destDir = 'assets/css'
+	var destDir = 'dist/assets/css'
 	gulp.src('assets/scss/style.scss')
 		.pipe(sass({ style: 'expanded' }))
 			.pipe(autoprefixer('last 3 version', 'safari 5', 'ie 8', 'ie 9'))
@@ -33,6 +33,14 @@ gulp.task('sass', function() {
 		.pipe(minifyCss())
 		.pipe(gulp.dest(destDir));
 });
+
+gulp.task('copy-assets', function() {
+	gulp.src('assets/{img,js}/**/*', { base: 'assets' })
+		.pipe(gulp.dest('dist/assets'))
+
+	gulp.src('assets/root/*')
+		.pipe(gulp.dest('dist'))
+})
 
 gulp.task('service-worker', function() {
 	return workboxBuild.generateSW({
@@ -67,4 +75,6 @@ gulp.task('watch', function() {
 	gulp.watch('assets/scss/**/**.scss', ['sass']);
 });
 
-gulp.task('build', ['sass', 'service-worker']);
+gulp.task('build', ['hbs', 'sass', 'copy-assets'
+// , 'service-worker'
+]);

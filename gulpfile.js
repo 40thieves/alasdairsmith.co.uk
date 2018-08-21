@@ -13,7 +13,7 @@ var gulp = require('gulp')
 ;
 
 gulp.task('hbs', function () {
-	return gulp.src('src/**/index.hbs')
+	return gulp.src(['src/**/*.hbs', '!src/partials/*'])
 		.pipe(handlebars({ year: new Date().getFullYear() }, {
 			batch: ['src/partials']
 		}))

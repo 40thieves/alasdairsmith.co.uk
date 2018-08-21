@@ -6,19 +6,26 @@ var gulp = require('gulp')
 ,	minifyCss = require('gulp-clean-css')
 ,	autoprefixer = require('gulp-autoprefixer')
 ,	workboxBuild = require('workbox-build')
+,	handlebars = require('gulp-compile-handlebars')
+,	extReplace = require('gulp-ext-replace')
 
 ,	log = util.log
 ;
 
-var sassFile = 'assets/scss/style.scss'
-,	sassFiles = 'assets/scss/**/**.scss'
-,	destDir = 'assets/css'
-;
+gulp.task('hbs', function () {
+	return gulp.src('src/**/index.hbs')
+		.pipe(handlebars({ year: new Date().getFullYear() }, {
+			batch: ['src/partials']
+		}))
+		.pipe(extReplace('.html'))
+		.pipe(gulp.dest('dist'))
+})
 
 gulp.task('sass', function() {
 	log('Generate CSS files ' + (new Date()).toString());
 
-	gulp.src(sassFile)
+	var destDir = 'assets/css'
+	gulp.src('assets/scss/style.scss')
 		.pipe(sass({ style: 'expanded' }))
 			.pipe(autoprefixer('last 3 version', 'safari 5', 'ie 8', 'ie 9'))
 		.pipe(gulp.dest(destDir))
@@ -57,7 +64,7 @@ gulp.task('service-worker', function() {
 gulp.task('watch', function() {
 	log('Watching scss files for modifications');
 
-	gulp.watch(sassFiles, ['sass']);
+	gulp.watch('assets/scss/**/**.scss', ['sass']);
 });
 
 gulp.task('build', ['sass', 'service-worker']);

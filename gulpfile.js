@@ -59,3 +59,5 @@ gulp.task('watch', function() {
 
 	gulp.watch(sassFiles, ['sass']);
 });
+
+gulp.task('build', ['sass', 'service-worker']);

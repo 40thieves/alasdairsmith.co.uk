@@ -44,15 +44,11 @@ gulp.task('copy-assets', function() {
 
 gulp.task('service-worker', function() {
 	return workboxBuild.generateSW({
-		globDirectory: '.',
+		globDirectory: 'dist',
 		globPatterns: [
-			'**/*.{js,min.css,jpg,png}',
+			'**/*.{html,js,min.css,jpg,png}',
 		],
-		globIgnores: [
-			'node_modules/**/*',
-			'gulpfile.js'
-		],
-		swDest: 'sw.js',
+		swDest: 'dist/sw.js',
 		runtimeCaching: [{
 			urlPattern: new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
 			handler: 'cacheFirst',
@@ -75,6 +71,4 @@ gulp.task('watch', function() {
 	gulp.watch('assets/scss/**/**.scss', ['sass']);
 });
 
-gulp.task('build', ['hbs', 'sass', 'copy-assets'
-// , 'service-worker'
-]);
+gulp.task('build', ['hbs', 'sass', 'copy-assets', 'service-worker']);

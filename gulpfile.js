@@ -8,11 +8,13 @@ var gulp = require('gulp')
 ,	workboxBuild = require('workbox-build')
 ,	handlebars = require('gulp-compile-handlebars')
 ,	extReplace = require('gulp-ext-replace')
+,	del = require('del')
 
-,	log = util.log
-;
+gulp.task('clean', function() {
+	return del('dist')
+})
 
-gulp.task('hbs', function () {
+gulp.task('hbs', function() {
 	return gulp.src(['src/**/*.hbs', '!src/partials/*'])
 		.pipe(handlebars({ year: new Date().getFullYear() }, {
 			batch: ['src/partials']
@@ -22,25 +24,27 @@ gulp.task('hbs', function () {
 })
 
 gulp.task('sass', function() {
-	log('Generate CSS files ' + (new Date()).toString());
-
 	var destDir = 'dist/assets/css'
-	gulp.src('assets/scss/style.scss')
+	return gulp.src('assets/scss/style.scss')
 		.pipe(sass({ style: 'expanded' }))
 			.pipe(autoprefixer('last 3 version', 'safari 5', 'ie 8', 'ie 9'))
 		.pipe(gulp.dest(destDir))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifyCss())
-		.pipe(gulp.dest(destDir));
-});
+		.pipe(gulp.dest(destDir))
+})
 
 gulp.task('copy-assets', function() {
-	gulp.src('assets/{img,js}/**/*', { base: 'assets' })
+	return gulp.src('assets/{img,js}/**/*', { base: 'assets' })
 		.pipe(gulp.dest('dist/assets'))
+})
 
-	gulp.src('assets/root/*')
+gulp.task('copy-root-assets', function() {
+	return gulp.src('assets/root/*')
 		.pipe(gulp.dest('dist'))
 })
+
+gulp.task('copy', gulp.parallel('copy-assets', 'copy-root-assets'))
 
 gulp.task('service-worker', function() {
 	return workboxBuild.generateSW({
@@ -66,9 +70,7 @@ gulp.task('service-worker', function() {
 })
 
 gulp.task('watch', function() {
-	log('Watching scss files for modifications');
+	gulp.watch('assets/scss/**/**.scss', ['sass'])
+})
 
-	gulp.watch('assets/scss/**/**.scss', ['sass']);
-});
-
-gulp.task('build', ['hbs', 'sass', 'copy-assets', 'service-worker']);
+gulp.task('build', gulp.series('clean', 'hbs', 'sass', 'copy', 'service-worker'))

@@ -18,15 +18,14 @@
   },
   "homepage": "https://github.com/40thieves/alasdairsmith.org.uk",
   "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean-css": "^2.0.10",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-ext-replace": "^0.3.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-util": "^3.0.7",
+    "gulp-sass": "^4.0.2",
     "workbox-build": "^3.4.1"
   }
 }

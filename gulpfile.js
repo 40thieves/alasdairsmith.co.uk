@@ -1,57 +1,50 @@
 var gulp = require('gulp'),
   rename = require('gulp-rename'),
-  sass = require('gulp-sass'),
+  gulpSass = require('gulp-sass'),
   minifyCss = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer'),
   workboxBuild = require('workbox-build'),
-  handlebars = require('gulp-compile-handlebars'),
+  handlebars = require('gulp-hb'),
   extReplace = require('gulp-ext-replace'),
   del = require('del')
 
-gulp.task('clean', function() {
+function clean() {
   return del('dist')
-})
+}
 
-gulp.task('hbs', function() {
+function hbs() {
   return gulp
     .src(['src/**/*.hbs', '!src/partials/*'])
-    .pipe(
-      handlebars(
-        { year: new Date().getFullYear() },
-        {
-          batch: ['src/partials']
-        }
-      )
-    )
+    .pipe(handlebars().partials('./src/partials/*.hbs'))
     .pipe(extReplace('.html'))
     .pipe(gulp.dest('dist'))
-})
+}
 
-gulp.task('sass', function() {
+function sass() {
   var destDir = 'dist/assets/css'
   return gulp
     .src('assets/scss/style.scss')
-    .pipe(sass({ style: 'expanded' }))
+    .pipe(gulpSass().on('error', gulpSass.logError))
     .pipe(autoprefixer('last 3 version', 'safari 5', 'ie 8', 'ie 9'))
     .pipe(gulp.dest(destDir))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifyCss())
     .pipe(gulp.dest(destDir))
-})
+}
 
-gulp.task('copy-assets', function() {
+function copyAssets() {
   return gulp
     .src('assets/{img,js}/**/*', { base: 'assets' })
     .pipe(gulp.dest('dist/assets'))
-})
+}
 
-gulp.task('copy-root-assets', function() {
+function copyRootAssets() {
   return gulp.src('assets/root/*').pipe(gulp.dest('dist'))
-})
+}
 
-gulp.task('copy', gulp.parallel('copy-assets', 'copy-root-assets'))
+const copy = gulp.parallel(copyAssets, copyRootAssets)
 
-gulp.task('service-worker', function() {
+function serviceWorker() {
   return workboxBuild.generateSW({
     globDirectory: 'dist',
     globPatterns: ['**/*.{html,js,min.css,jpg,png}'],
@@ -72,13 +65,7 @@ gulp.task('service-worker', function() {
       }
     ]
   })
-})
+}
 
-gulp.task('watch', function() {
-  gulp.watch('assets/scss/**/**.scss', ['sass'])
-})
-
-gulp.task(
-  'build',
-  gulp.series('clean', 'hbs', 'sass', 'copy', 'service-worker')
-)
+// gulp.watch('./assets/scss/**/**.scss', sass)
+exports.build = gulp.series(clean, hbs, sass, copy, serviceWorker)

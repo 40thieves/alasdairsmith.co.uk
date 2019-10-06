@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>{{#if title}}{{title}} | {{/if}}Alasdair Smith | 40 Thieves</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Alasdair Smith is a web developer based in London">
+  <meta name="author" content="Alasdair Smith">
+  <meta name="theme-color" content="#ffffff">
+  
+  {{!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'none';
+    style-src 'self' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self';
+    script-src 'self';
+    worker-src 'self';
+    manifest-src 'self';
+  "> --}}
+  
+  {{!-- <link rel="author" href="humans.txt"> --}}
+  
+  {{!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png"> --}}
+  {{!-- <link rel="shortcut icon" href="/icon.png" sizes="300x300" type="image/png"> --}}
+  {{!-- <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png"> --}}
+  {{!-- <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png"> --}}
+  {{!-- <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png"> --}}
+  {{!-- <link rel="manifest" href="/manifest.json"> --}}
+  
+  <!-- Want a nicely formatted repo? -->
+  <!-- Check the Github: https://github.com/40thieves/alasdairsmith.co.uk -->
+  <!-- Or have some questions? alasdairsmith100 [at] gmail [dot] com -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto&display=swap' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {{> colorBar}}
+  {{> header}}
+
+  {{{content}}}
+</body>
+
+</html>

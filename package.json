@@ -1,0 +1,22 @@
+{
+  "name": "alasdairsmith_co_uk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:eleventy": "eleventy",
+    "start:eleventy": "eleventy --serve",
+    "build:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css",
+    "start:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css --watch",
+    "start": "npm run start:postcss & npm run start:eleventy"
+  },
+  "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^1.1.2",
+    "tailwindcss-grid": "^1.2.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "postcss-cli": "^6.1.3"
+  }
+}

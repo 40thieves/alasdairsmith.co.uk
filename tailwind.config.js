@@ -17,7 +17,9 @@ module.exports = {
     require("tailwindcss-grid")({
       gaps: {
         0: 0,
-        2: "0.5rem"
+        1: "0.25rem",
+        2: "0.5rem",
+        4: "1rem"
       }
     })
   ]

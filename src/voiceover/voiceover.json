@@ -1,0 +1,80 @@
+{
+  "sections": [
+    {
+      "name": "Basics",
+      "tasks": [
+        {
+          "description": "Toggle on/off",
+          "command": "Command + F5"
+        },
+        {
+          "description": "Stop reading",
+          "command": "Command"
+        },
+        {
+          "description": "Start reading",
+          "command": "Control + Option A"
+        },
+        {
+          "description": "Open rotor",
+          "command": "Control + Option + U"
+        }
+      ]
+    },
+    {
+      "name": "Navigation",
+      "tasks": [
+        {
+          "description": "Read next item",
+          "command": "Control + Option + Right Arrow"
+        },
+        {
+          "description": "Read previous item",
+          "command": "Control + Option + Left Arrow"
+        },
+        {
+          "description": "Go to next focusable item",
+          "command": "Tab"
+        },
+        {
+          "description": "Go to previous focusable item",
+          "command": "Shift + Tab"
+        }
+      ]
+    },
+    {
+      "name": "Regions",
+      "tasks": [
+        {
+          "description": "Go into of region",
+          "command": "Control + Option + Down Arrow"
+        },
+        {
+          "description": "Go out of region",
+          "command": "Control + Option + Up Arrow"
+        }
+      ]
+    },
+    {
+      "name": "Shortcuts",
+      "tasks": [
+        {
+          "description": "Next heading",
+          "command": "Command Control + Option + H"
+        },
+        {
+          "description": "Next link",
+          "command": "Command + Control + Option + L"
+        },
+        {
+          "description": "Next form control",
+          "command": "Command + Control + Option + J"
+        },
+        {
+          "description": "Next list",
+          "command": "Command + Control + Option + X"
+        }
+      ]
+    }
+  ]
+}

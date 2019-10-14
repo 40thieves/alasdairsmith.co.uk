@@ -1,0 +1,22 @@
+---
+layout: layouts/no-title
+title: Voice Over Cheat Sheet
+---
+
+<header class="flex justify-center md:justify-start md:mx-16" role="banner">
+  <h1 class="mt-12">Voice Over Cheat Sheet</h1>
+</header>
+
+<main class="mx-auto w-5/6 max-w-5xl mt-12 grid md:grid-columns-2 grid-columns-1 grid-gap-4">
+  {{#each sections}}
+  <article>
+    <h2 class="pl-2 bg-green-500 text-white text-2xl">{{ name }}</h2>
+    <dl class="mt-1 pl-2 grid grid-columns-2 grid-gap-1">
+      {{#each tasks}}
+        <dt>{{ description }}</dt>
+        <dd>{{ command }}</dd>
+      {{/each}}
+    </dl>
+  </article>
+  {{/each}}
+</main>

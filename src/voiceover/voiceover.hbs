@@ -11,10 +11,10 @@ title: Voice Over Cheat Sheet
   {{#each sections}}
   <article>
     <h2 class="pl-2 mb-2 bg-green-500 text-white text-2xl">{{ name }}</h2>
-    <dl class="mt-1 pl-2 grid grid-gap-3" style="grid-template-columns: 1fr 2fr;">
+    <dl class="mt-1 pl-2 grid grid-gap-2" style="grid-template-columns: 1fr 2fr;">
       {{#each tasks}}
         <dt>{{ description }}</dt>
-        <dd>{{#join command "+"}}<kbd class="p-1 m-2 first:ml-0 last:mr-0 bg-gray-300 rounded">{{ this }}</kbd>{{/join}}</dd>
+        <dd>{{#join command "+"}}<kbd class="px-1 py-px m-2 first:ml-0 last:mr-0 bg-gray-200 border border-gray-300 rounded">{{ this }}</kbd>{{/join}}</dd>
       {{/each}}
     </dl>
   </article>

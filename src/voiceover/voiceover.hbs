@@ -14,7 +14,7 @@ title: Voice Over Cheat Sheet
     <dl class="mt-1 pl-2 voiceover__tasks-grid">
       {{#each tasks}}
         <dt>{{ description }}</dt>
-        <dd>{{ command }}</dd>
+        <dd>{{#join command "+"}}<kbd>{{ this }}</kbd>{{/join}}</dd>
       {{/each}}
     </dl>
   </article>

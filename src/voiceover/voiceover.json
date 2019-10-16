@@ -5,19 +5,19 @@
       "tasks": [
         {
           "description": "Toggle on/off",
-          "command": "Command + F5"
+          "command": ["Command", "F5"]
         },
         {
           "description": "Stop reading",
-          "command": "Command"
+          "command": ["Command"]
         },
         {
           "description": "Start reading",
-          "command": "Control + Option A"
+          "command": ["Control", "Option A"]
         },
         {
           "description": "Open rotor",
-          "command": "Control + Option + U"
+          "command": ["Control", "Option", "U"]
         }
       ]
     },
@@ -26,19 +26,19 @@
       "tasks": [
         {
           "description": "Read next item",
-          "command": "Control + Option + Right Arrow"
+          "command": ["Control", "Option", "⬆"]
         },
         {
           "description": "Read previous item",
-          "command": "Control + Option + Left Arrow"
+          "command": ["Control", "Option", "⬇"]
         },
         {
           "description": "Go to next focusable item",
-          "command": "Tab"
+          "command": ["Tab"]
         },
         {
           "description": "Go to previous focusable item",
-          "command": "Shift + Tab"
+          "command": ["Shift", "Tab"]
         }
       ]
     },
@@ -47,11 +47,11 @@
       "tasks": [
         {
           "description": "Go into of region",
-          "command": "Control + Option + Down Arrow"
+          "command": ["Control", "Option", "⬇"]
         },
         {
           "description": "Go out of region",
-          "command": "Control + Option + Up Arrow"
+          "command": ["Control", "Option", "⬆"]
         }
       ]
     },
@@ -60,19 +60,19 @@
       "tasks": [
         {
           "description": "Next heading",
-          "command": "Command Control + Option + H"
+          "command": ["Command", "Control", "Option", "H"]
         },
         {
           "description": "Next link",
-          "command": "Command + Control + Option + L"
+          "command": ["Command", "Control", "Option", "L"]
         },
         {
           "description": "Next form control",
-          "command": "Command + Control + Option + J"
+          "command": ["Command", "Control", "Option", "J"]
         },
         {
           "description": "Next list",
-          "command": "Command + Control + Option + X"
+          "command": ["Command", "Control", "Option", "X"]
         }
       ]
     }

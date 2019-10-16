@@ -37,3 +37,8 @@ h5 {
 h6 {
   @apply text-lg;
 }
+
+.voiceover__grid {
+  @apply grid grid-gap-1;
+  grid-template-columns: 1fr 2fr;
+}

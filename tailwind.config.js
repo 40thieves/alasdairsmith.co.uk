@@ -13,11 +13,15 @@ module.exports = {
       }
     }
   },
+  variants: {
+    margin: ['first', 'last']
+  },
   plugins: [
     require('tailwindcss-grid')({
       gaps: {
         0: 0,
         1: '0.25rem',
+        3: '0.75rem',
         2: '0.5rem',
         4: '1rem'
       }

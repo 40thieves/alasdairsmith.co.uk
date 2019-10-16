@@ -37,8 +37,3 @@ h5 {
 h6 {
   @apply text-lg;
 }
-
-.voiceover__tasks-grid {
-  @apply grid grid-gap-2;
-  grid-template-columns: 1fr 2fr;
-}

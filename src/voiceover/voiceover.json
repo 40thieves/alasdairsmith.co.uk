@@ -26,11 +26,11 @@
       "tasks": [
         {
           "description": "Read next item",
-          "command": ["Control", "Option", "⬆"]
+          "command": ["Control", "Option", "↑"]
         },
         {
           "description": "Read previous item",
-          "command": ["Control", "Option", "⬇"]
+          "command": ["Control", "Option", "↓"]
         },
         {
           "description": "Go to next focusable item",
@@ -47,11 +47,11 @@
       "tasks": [
         {
           "description": "Go into of region",
-          "command": ["Control", "Option", "⬇"]
+          "command": ["Control", "Option", "↓"]
         },
         {
           "description": "Go out of region",
-          "command": ["Control", "Option", "⬆"]
+          "command": ["Control", "Option", "↑"]
         }
       ]
     },

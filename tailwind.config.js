@@ -14,7 +14,7 @@ module.exports = {
     }
   },
   variants: {
-    margin: ['first', 'last']
+    margin: ['responsive', 'first', 'hover', 'focus']
   },
   plugins: [
     require('tailwindcss-grid')({

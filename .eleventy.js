@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
   )
 
   eleventyConfig.addHandlebarsHelper('dev', options => {
-    const env = process.env.NODE_ENV
+    const env = process.env.ELEVENTY_ENV
     return !env || env.toLowerCase().startsWith('dev')
       ? options.fn(this)
       : options.inverse(this)

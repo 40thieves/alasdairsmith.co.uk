@@ -5,6 +5,13 @@ module.exports = function(eleventyConfig) {
     array.map(item => options.fn(item)).join(sep)
   )
 
+  eleventyConfig.addHandlebarsHelper('dev', options => {
+    const env = process.env.NODE_ENV
+    return !env || env.toLowerCase().startsWith('dev')
+      ? options.fn(this)
+      : options.inverse(this)
+  })
+
   return {
     dir: {
       input: 'src',

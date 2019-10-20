@@ -12,15 +12,16 @@
   <meta name="author" content="Alasdair Smith">
   <meta name="theme-color" content="#ffffff">
   
-  {{!-- <meta http-equiv="Content-Security-Policy" content="
+  <meta http-equiv="Content-Security-Policy" content="
     default-src 'none';
     style-src 'self' https://fonts.googleapis.com;
     font-src 'self' https://fonts.gstatic.com;
     img-src 'self';
-    script-src 'self';
+    script-src 'self' {{#dev}}'sha256-ThhI8UaSFEbbl6cISiZpnJ4Z44uNSq2tPKgyRTD3LyU='{{/dev}};
+    connect-src 'self';
     worker-src 'self';
     manifest-src 'self';
-  "> --}}
+  ">
   
   {{!-- <link rel="author" href="humans.txt"> --}}
   

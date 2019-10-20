@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy({ 'src/root/*': '.' })
 
   eleventyConfig.addHandlebarsHelper('join', (array, sep, options) =>
     array.map(item => options.fn(item)).join(sep)
@@ -16,7 +17,7 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: 'src',
       output: 'dist',
-      templateFormats: ['hbs', 'css']
+      templateFormats: ['hbs']
     }
   }
 }

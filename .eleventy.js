@@ -1,3 +1,5 @@
+const pwaPlugin = require('eleventy-plugin-pwa')
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/img')
   eleventyConfig.addPassthroughCopy('src/js')
@@ -13,6 +15,8 @@ module.exports = function(eleventyConfig) {
       ? options.fn(this)
       : options.inverse(this)
   })
+
+  eleventyConfig.addPlugin(pwaPlugin)
 
   return {
     dir: {

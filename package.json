@@ -7,7 +7,8 @@
     "start:eleventy": "eleventy --serve",
     "build:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css",
     "start:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css --watch",
-    "start": "concurrently -k -n 11ty,css npm:start:eleventy npm:start:postcss"
+    "start": "concurrently -k -n 11ty,css npm:start:eleventy npm:start:postcss",
+    "build": "npm run build:postcss && npm run build:eleventy"
   },
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
   "license": "Parity-6.0.0",

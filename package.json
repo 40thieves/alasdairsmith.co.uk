@@ -10,7 +10,7 @@
     "start": "npm run start:postcss & npm run start:eleventy"
   },
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
-  "license": "MIT",
+  "license": "Parity-6.0.0",
   "dependencies": {
     "tailwindcss": "^1.1.2",
     "tailwindcss-grid": "^1.2.1"

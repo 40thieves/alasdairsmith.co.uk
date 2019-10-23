@@ -8,7 +8,7 @@
     "build:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css",
     "start:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css --watch",
     "start": "run-p start:*",
-    "build": "run-s build:*"
+    "build": "run-s build:postcss build:eleventy"
   },
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
   "license": "Parity-6.0.0",

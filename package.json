@@ -1,7 +1,7 @@
 {
   "name": "alasdairsmith_co_uk",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "3.0.0",
+  "private": true,
   "scripts": {
     "build:eleventy": "eleventy",
     "start:eleventy": "eleventy --serve",

@@ -11,7 +11,7 @@ body {
 }
 
 a {
-  @apply text-blue-500 no-underline;
+  @apply text-blue-700 no-underline;
 }
 
 h1 {

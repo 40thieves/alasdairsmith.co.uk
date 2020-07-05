@@ -4,10 +4,12 @@
 {{> head}}
 
 <body>
-  {{> colorBar}}
-  {{> header}}
+  <div style="height: 100vh; display: grid; grid-template-rows: min-content min-content auto min-content">
+    {{> colorBar}}
+    {{> header}}
 
-  {{{content}}}
+    {{{content}}}
+  </div>
 
   <script type="text/javascript" src="/js/script.js"></script>
 </body>

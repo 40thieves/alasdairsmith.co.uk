@@ -17,7 +17,7 @@ module.exports = {
     margin: ['responsive', 'first', 'hover', 'focus']
   },
   purge: {
-    enable: process.env.ELEVENTY_ENV === 'production',
+    enabled: process.env.ELEVENTY_ENV === 'production',
     content: ['./src/**/*.hbs', './src/**/*.js']
   }
 }

@@ -10,6 +10,9 @@ module.exports = {
         'pastel-teal': 'hsla(173, 77%, 37%, 0.2)',
         'pastel-blue': 'hsla(204, 77%, 44%, 0.2)',
         'pastel-purple': 'hsla(326, 52%, 40%, 0.2)'
+      },
+      gridTemplateRows: {
+        layout: 'min-content min-content auto min-content'
       }
     }
   },

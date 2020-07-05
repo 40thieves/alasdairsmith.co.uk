@@ -4,9 +4,11 @@
 {{> head}}
 
 <body>
-  {{> colorBar}}
+  <div class="h-screen grid grid-rows-layout">
+    {{> colorBar}}
 
-  {{{content}}}
+    {{{content}}}
+  </div>
 
   <script type="text/javascript" src="/js/script.js"></script>
 </body>

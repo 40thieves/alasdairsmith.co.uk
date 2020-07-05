@@ -13,12 +13,10 @@
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
   "license": "Parity-6.0.0",
   "dependencies": {
-    "tailwindcss": "^1.1.2",
-    "tailwindcss-grid": "^1.2.1"
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
-    "@fullhuman/postcss-purgecss": "^1.3.0",
     "autoprefixer": "^9.6.5",
     "cssnano": "^4.1.10",
     "eleventy-plugin-pwa": "^1.0.8",

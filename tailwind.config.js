@@ -16,15 +16,8 @@ module.exports = {
   variants: {
     margin: ['responsive', 'first', 'hover', 'focus']
   },
-  plugins: [
-    require('tailwindcss-grid')({
-      gaps: {
-        0: 0,
-        1: '0.25rem',
-        3: '0.75rem',
-        2: '0.5rem',
-        4: '1rem'
-      }
-    })
-  ]
+  purge: {
+    enable: process.env.ELEVENTY_ENV === 'production',
+    content: ['./src/**/*.hbs', './src/**/*.js']
+  }
 }

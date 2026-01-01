@@ -2,8 +2,101 @@
 import BaseLayout from '../layouts/base.astro'
 ---
 
+<style>
+  .colours {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1rem;
+  }
+
+  .swatch-container {
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    place-items: center;
+    gap: 1rem;
+  }
+
+  .swatch {
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    place-items: center;
+    background-color: var(--background-clr);
+    color: var(--text-clr);
+    border: 1px solid var(--text-clr);
+  }
+</style>
+
 <BaseLayout title="Style guide">
   <main>
+    <div class="colours">
+      <div class="swatch-container">
+        {
+          ['clr-orange-100', 'clr-orange-200', 'clr-orange-300'].map((clr) => {
+            return (
+              <div
+                class="swatch"
+                style={`--background-clr: var(--clr-background); --text-clr: var(--${clr});`}
+              >
+                <span>Body</span>
+              </div>
+            )
+          })
+        }
+      </div>
+
+      <div class="swatch-container">
+        {
+          ['clr-orange-100', 'clr-orange-200', 'clr-orange-300'].map((clr) => {
+            return (
+              <div
+                class="swatch"
+                style={`--background-clr: var(--${clr}); --text-clr: var(--clr-background);`}
+              >
+                <span>Body</span>
+              </div>
+            )
+          })
+        }
+      </div>
+
+      <div class="swatch-container">
+        {
+          ['clr-blue-100', 'clr-blue-200', 'clr-blue-300'].map((clr) => {
+            return (
+              <div
+                class="swatch"
+                style={`--background-clr: var(--clr-background); --text-clr: var(--${clr});`}
+              >
+                <span>Body</span>
+              </div>
+            )
+          })
+        }
+      </div>
+
+      <div class="swatch-container">
+        {
+          ['clr-blue-100', 'clr-blue-200', 'clr-blue-300'].map((clr) => {
+            return (
+              <div
+                class="swatch"
+                style={`--background-clr: var(--${clr}); --text-clr: var(--clr-background);`}
+              >
+                <span>Body</span>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+
+    <hr />
+
     <h1>I'm an h1 bar</h1>
     <h2>I'm an h2 with a <a href="#">link</a></h2>
     <h3>I'm an h3</h3>

@@ -2,26 +2,6 @@
   "name": "alasdairsmith_co_uk",
   "version": "3.0.0",
   "private": true,
-  "scripts": {
-    "build:eleventy": "eleventy",
-    "start:eleventy": "eleventy --serve",
-    "build:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css",
-    "start:postcss": "postcss src/styles/styles.css -o dist/styles/styles.css --watch",
-    "start": "run-p start:*",
-    "build": "run-s build:postcss build:eleventy"
-  },
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
-  "license": "Parity-6.0.0",
-  "dependencies": {
-    "tailwindcss": "^1.4.6"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "autoprefixer": "^9.6.5",
-    "cssnano": "^5.1.14",
-    "eleventy-plugin-pwa": "^1.0.8",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.19",
-    "postcss-cli": "^10.1.0"
-  }
+  "license": "Parity-6.0.0"
 }

@@ -2,6 +2,15 @@
   "name": "alasdairsmith_co_uk",
   "version": "3.0.0",
   "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
-  "license": "Parity-6.0.0"
+  "license": "Parity-6.0.0",
+  "dependencies": {
+    "astro": "^5.16.6"
+  }
 }

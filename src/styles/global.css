@@ -94,7 +94,6 @@ h6 {
   text-decoration: underline;
   text-decoration-color: var(--clr-accent);
   text-decoration-thickness: 2px;
-  text-underline-offset: 0.15em;
 }
 
 a {

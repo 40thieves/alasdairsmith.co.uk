@@ -57,19 +57,20 @@ html {
 
   --hue-blue: 243;
   --clr-blue-100: light-dark(
-    oklch(0.52 0.25 var(--hue-blue)),
+    oklch(0.52 0.2 var(--hue-blue)),
     oklch(0.7 0.25 var(--hue-blue))
   );
   --clr-blue-200: light-dark(
-    oklch(0.45 0.35 var(--hue-blue)),
+    oklch(0.45 0.25 var(--hue-blue)),
     oklch(0.6 0.25 var(--hue-blue))
   );
   --clr-blue-300: light-dark(
-    oklch(0.3 0.35 var(--hue-blue)),
+    oklch(0.35 0.3 var(--hue-blue)),
     oklch(0.58 0.35 var(--hue-blue))
   );
 
   --clr-primary: var(--clr-orange-200);
+  --clr-secondary: var(--clr-blue-200);
 
   --clr-white: oklch(0.9764 0.0125 var(--hue-orange));
   --clr-black: oklch(0.1218 0.0429 var(--hue-orange));
@@ -137,4 +138,9 @@ samp {
 
 :where(img, figure) + figcaption {
   margin-block-start: 0.75rem;
+}
+
+::selection {
+  color: var(--clr-white);
+  background-color: light-dark(var(--clr-blue-100), var(--clr-blue-200));
 }

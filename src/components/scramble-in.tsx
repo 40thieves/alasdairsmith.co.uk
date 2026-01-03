@@ -1,5 +1,5 @@
 import { forwardRef } from 'preact/compat'
-import { useEffect, useRef, useState } from 'preact/hooks'
+import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 
 interface ScrambleInProps {
   text: string
@@ -22,63 +22,44 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
 
     const visibleLetterCountRef = useRef(0)
 
-    const prevTimestampRef = useRef<number>(performance.now())
+    const calculateDisplayText = useCallback(() => {
+      // Increase allowed visible chars
+      visibleLetterCountRef.current = visibleLetterCountRef.current + 1
 
-    useEffect(() => {
-      let frameRequestId: number | undefined
+      // Calculate how many scrambled letters we can show
+      const remainingSpace = Math.max(
+        0,
+        text.length - visibleLetterCountRef.current
+      )
+      const currentScrambleCount = Math.min(
+        remainingSpace,
+        scrambledLetterCount
+      )
 
-      function animate(timestamp: number) {
-        const elapsed = timestamp - prevTimestampRef.current
+      // Generate scrambled text
+      const scrambledPart = Array(currentScrambleCount)
+        .fill(0)
+        .map(() => characters[Math.floor(Math.random() * characters.length)])
+        .join('')
 
-        if (elapsed > scrambleSpeed) {
-          // If we've not revealed enough chars to match the final text,
-          // increase allowed chars by 1
-          if (visibleLetterCountRef.current < text.length) {
-            // Increase allowed visible chars
-            visibleLetterCountRef.current = visibleLetterCountRef.current + 1
-
-            // Calculate how many scrambled letters we can show
-            const remainingSpace = Math.max(
-              0,
-              text.length - visibleLetterCountRef.current
-            )
-            const currentScrambleCount = Math.min(
-              remainingSpace,
-              scrambledLetterCount
-            )
-
-            // Generate scrambled text
-            const scrambledPart = Array(currentScrambleCount)
-              .fill(0)
-              .map(
-                () => characters[Math.floor(Math.random() * characters.length)]
-              )
-              .join('')
-
-            setDisplayText(
-              // Slice the text from the beginning to the number of allowed
-              // visible chars and append the generated scrambled chars
-              text.slice(0, visibleLetterCountRef.current) + scrambledPart
-            )
-          }
-          // Complete animation
-          else {
-            if (frameRequestId) cancelAnimationFrame(frameRequestId)
-            return
-          }
-
-          prevTimestampRef.current = performance.now()
-        }
-
-        frameRequestId = requestAnimationFrame(animate)
-      }
-
-      frameRequestId = requestAnimationFrame(animate)
-
-      return () => {
-        if (frameRequestId) cancelAnimationFrame(frameRequestId)
-      }
+      setDisplayText(
+        // Slice the text from the beginning to the number of allowed visible
+        // chars and append the generated scrambled chars.
+        text.slice(0, visibleLetterCountRef.current) + scrambledPart
+      )
     }, [text, scrambledLetterCount, characters, scrambleSpeed])
+
+    // Set up a throttled animation to match the animation speed.
+    const cancelAnimation = useThrottledAnimationFrame(
+      calculateDisplayText,
+      scrambleSpeed
+    )
+
+    // If we've revealed enough chars to match the final text, cancel the
+    // animation
+    if (visibleLetterCountRef.current >= text.length) {
+      cancelAnimation()
+    }
 
     const revealed = displayText.slice(0, visibleLetterCountRef.current)
     const scrambled = displayText.slice(visibleLetterCountRef.current)
@@ -94,5 +75,48 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
     )
   }
 )
+
+function useThrottledAnimationFrame(animateCb: () => void, maxWait: number) {
+  const frameRequestId = useRef<number>()
+
+  // Init previous timestamp to the current time
+  const prevTimestampRef = useRef<number>(performance.now())
+
+  useEffect(() => {
+    function animate(timestamp: number) {
+      // Determine how much time has elapsed since the previous frame
+      const elapsed = timestamp - prevTimestampRef.current
+
+      // Only trigger the animation callback if the elapsed time has gone past
+      // the throttle maximum wait time.
+      if (elapsed > maxWait) {
+        animateCb()
+
+        // Update the previous frame timestamp to be this frame
+        prevTimestampRef.current = timestamp
+      }
+
+      // Ensure the animation cycle continues.
+      // We want this to happen even if the wait threshold hasn't been met so
+      // that the elapsed time continues to increment.
+      frameRequestId.current = requestAnimationFrame(animate)
+    }
+
+    // Init the animation cycle
+    frameRequestId.current = requestAnimationFrame(animate)
+
+    // If deps change, ensure the animation cycle is cancelled so that outdated
+    // cycles are stopped
+    return () => {
+      cancel()
+    }
+  }, [animateCb]) // Ensure that the effect depends on the animation callback
+
+  function cancel() {
+    if (frameRequestId.current) cancelAnimationFrame(frameRequestId.current)
+  }
+
+  return cancel
+}
 
 export default ScrambleIn

@@ -61,16 +61,10 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
       cancelAnimation()
     }
 
-    const revealed = displayText.slice(0, visibleLetterCountRef.current)
-    const scrambled = displayText.slice(visibleLetterCountRef.current)
-
     return (
       <span ref={ref}>
         <span className="screenreader-only">{text}</span>
-        <span aria-hidden="true">
-          {revealed}
-          {scrambled}
-        </span>
+        <span aria-hidden="true">{displayText}</span>
       </span>
     )
   }

@@ -69,10 +69,11 @@ html {
     oklch(0.58 0.35 var(--hue-blue))
   );
 
+  --clr-primary: var(--clr-orange-200);
+
   --clr-white: oklch(0.9764 0.0125 var(--hue-orange));
   --clr-black: oklch(0.1218 0.0429 var(--hue-orange));
 
-  --clr-accent: var(--clr-orange-200);
   --clr-body: light-dark(var(--clr-black), var(--clr-white));
   --clr-background: light-dark(var(--clr-white), var(--clr-black));
 
@@ -92,7 +93,7 @@ h5,
 h6 {
   font-family: var(--fnt-serif);
   text-decoration: underline;
-  text-decoration-color: var(--clr-accent);
+  text-decoration-color: var(--clr-primary);
   text-decoration-thickness: 2px;
 
   a:hover {
@@ -102,7 +103,7 @@ h6 {
 }
 
 a {
-  color: var(--clr-accent);
+  color: var(--clr-primary);
 }
 
 h1,
@@ -125,7 +126,7 @@ samp {
   background-color: var(--clr-body);
   color: var(--clr-background);
   border-radius: 0.25rem;
-  border: 2px solid var(--clr-accent);
+  border: 2px solid var(--clr-primary);
 }
 
 code,

@@ -18,20 +18,22 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
     },
     ref
   ) => {
-    const [displayText, setDisplayText] = useState('')
-
-    const visibleCharCountRef = useRef(0)
+    // Initialise displayed text to the first char of the final text.
+    const [displayText, setDisplayText] = useState(() => text.at(0))
+    // Initialise visible char count based on the displayed text (and fallback
+    // to 0 if empty string is provided).
+    const visibleCharCountRef = useRef(displayText ? displayText.length : 0)
 
     const calculateDisplayText = useCallback(() => {
-      // Increase allowed visible chars
+      // Increase allowed visible chars.
       visibleCharCountRef.current = visibleCharCountRef.current + 1
 
-      // Calculate how many scrambled chars we can show
+      // Calculate how many scrambled chars we can show.
       const remainingCharCount = Math.max(
         0,
         text.length - visibleCharCountRef.current
       )
-      // Clamp to target number of scrambled chars
+      // Clamp to target number of scrambled chars.
       const scrambledCharCount = Math.min(
         remainingCharCount,
         targetNumScrambledChars
@@ -62,7 +64,7 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
     )
 
     // If we've revealed enough chars to match the final text, cancel the
-    // animation
+    // animation.
     if (visibleCharCountRef.current >= text.length) {
       cancelAnimation()
     }
@@ -79,12 +81,12 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
 function useThrottledAnimationFrame(animateCb: () => void, maxWait: number) {
   const frameRequestId = useRef<number>()
 
-  // Init previous timestamp to the current time
+  // Init previous timestamp to the current time.
   const prevTimestampRef = useRef<number>(performance.now())
 
   useEffect(() => {
     function animate(timestamp: number) {
-      // Determine how much time has elapsed since the previous frame
+      // Determine how much time has elapsed since the previous frame.
       const elapsed = timestamp - prevTimestampRef.current
 
       // Only trigger the animation callback if the elapsed time has gone past
@@ -92,7 +94,7 @@ function useThrottledAnimationFrame(animateCb: () => void, maxWait: number) {
       if (elapsed > maxWait) {
         animateCb()
 
-        // Update the previous frame timestamp to be this frame
+        // Update the previous frame timestamp to be this frame.
         prevTimestampRef.current = timestamp
       }
 
@@ -106,11 +108,11 @@ function useThrottledAnimationFrame(animateCb: () => void, maxWait: number) {
     frameRequestId.current = requestAnimationFrame(animate)
 
     // If deps change, ensure the animation cycle is cancelled so that outdated
-    // cycles are stopped
+    // cycles are stopped.
     return () => {
       cancel()
     }
-  }, [animateCb]) // Ensure that the effect depends on the animation callback
+  }, [animateCb]) // Ensure that the effect depends on the animation callback.
 
   function cancel() {
     if (frameRequestId.current) cancelAnimationFrame(frameRequestId.current)

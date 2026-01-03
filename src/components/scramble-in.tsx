@@ -21,7 +21,6 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
     const [displayText, setDisplayText] = useState('')
 
     const visibleLetterCountRef = useRef(0)
-    const scrambleOffsetRef = useRef(0)
 
     const prevTimestampRef = useRef<number>(performance.now())
 
@@ -35,10 +34,6 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
           // Increase visible text length
           if (visibleLetterCountRef.current < text.length) {
             visibleLetterCountRef.current = visibleLetterCountRef.current + 1
-          }
-          // Start sliding scrambled text out
-          else if (scrambleOffsetRef.current < scrambledLetterCount) {
-            scrambleOffsetRef.current = scrambleOffsetRef.current + 1
           }
           // Complete animation
           else {

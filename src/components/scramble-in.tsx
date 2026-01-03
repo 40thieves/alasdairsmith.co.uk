@@ -31,37 +31,41 @@ const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
         const elapsed = timestamp - prevTimestampRef.current
 
         if (elapsed > scrambleSpeed) {
-          // Increase visible text length
+          // If we've not revealed enough chars to match the final text,
+          // increase allowed chars by 1
           if (visibleLetterCountRef.current < text.length) {
+            // Increase allowed visible chars
             visibleLetterCountRef.current = visibleLetterCountRef.current + 1
+
+            // Calculate how many scrambled letters we can show
+            const remainingSpace = Math.max(
+              0,
+              text.length - visibleLetterCountRef.current
+            )
+            const currentScrambleCount = Math.min(
+              remainingSpace,
+              scrambledLetterCount
+            )
+
+            // Generate scrambled text
+            const scrambledPart = Array(currentScrambleCount)
+              .fill(0)
+              .map(
+                () => characters[Math.floor(Math.random() * characters.length)]
+              )
+              .join('')
+
+            setDisplayText(
+              // Slice the text from the beginning to the number of allowed
+              // visible chars and append the generated scrambled chars
+              text.slice(0, visibleLetterCountRef.current) + scrambledPart
+            )
           }
           // Complete animation
           else {
             if (frameRequestId) cancelAnimationFrame(frameRequestId)
             return
           }
-
-          // Calculate how many scrambled letters we can show
-          const remainingSpace = Math.max(
-            0,
-            text.length - visibleLetterCountRef.current
-          )
-          const currentScrambleCount = Math.min(
-            remainingSpace,
-            scrambledLetterCount
-          )
-
-          // Generate scrambled text
-          const scrambledPart = Array(currentScrambleCount)
-            .fill(0)
-            .map(
-              () => characters[Math.floor(Math.random() * characters.length)]
-            )
-            .join('')
-
-          setDisplayText(
-            text.slice(0, visibleLetterCountRef.current) + scrambledPart
-          )
 
           prevTimestampRef.current = performance.now()
         }

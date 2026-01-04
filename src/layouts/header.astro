@@ -10,7 +10,7 @@ import ScrambleIn from '../components/scramble-in'
     gap: 1rem;
     margin-block-end: 4rem;
     padding-block-end: 1.5rem;
-    border-block-end: 1px solid var(--clr-body);
+    border-block-end: 1px solid var(--clr-primary);
   }
 
   .ident {
@@ -23,13 +23,10 @@ import ScrambleIn from '../components/scramble-in'
     letter-spacing: clamp(-0.03em, calc((1em - 1rem) / -10), 0em);
 
     color: var(--clr-body);
-    text-decoration: underline;
-    text-decoration-color: var(--clr-primary);
-    text-decoration-thickness: 2px;
+    text-decoration: none;
 
     &:hover {
-      text-underline-offset: calc(0.15em - (3px / 4));
-      text-decoration-thickness: 3px;
+      color: var(--clr-primary);
     }
   }
 

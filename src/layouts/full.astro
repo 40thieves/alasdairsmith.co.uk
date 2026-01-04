@@ -1,0 +1,13 @@
+---
+import BaseLayout from './base.astro'
+import Header from './header.astro'
+
+const { title } = Astro.props
+---
+
+<BaseLayout title={title}>
+  <Header />
+  <main>
+    <slot />
+  </main>
+</BaseLayout>

@@ -1,0 +1,51 @@
+<style>
+  header {
+    display: grid;
+    grid-template-columns: minmax(min(100%, 10ch), max-content) 1fr;
+    align-items: center;
+    gap: 1rem;
+    margin-block-end: 4rem;
+    padding-block-end: 1.5rem;
+    border-block-end: 1px solid var(--clr-body);
+  }
+
+  .ident {
+    font-family: var(--fnt-serif);
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 1.1;
+    text-wrap: balance;
+    margin-block-start: 0;
+    letter-spacing: clamp(-0.03em, calc((1em - 1rem) / -10), 0em);
+
+    color: var(--clr-body);
+    text-decoration: underline;
+    text-decoration-color: var(--clr-primary);
+    text-decoration-thickness: 2px;
+
+    &:hover {
+      text-underline-offset: calc(0.15em - (3px / 4));
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 10ch), max-content)
+    );
+    justify-content: end;
+    place-items: center;
+    gap: 0.5rem;
+    list-style: none;
+  }
+</style>
+
+<header>
+  <a href="/" class="ident">Alasdair Smith</a>
+  <nav aria-label="Main">
+    <a href="/journal">Journal</a>
+    <!-- <a href="/notes">Notes</a> -->
+  </nav>
+</header>

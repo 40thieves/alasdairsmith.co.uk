@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/base.astro'
+import FullLayout from '../layouts/full.astro'
 import ScrambleIn from '../components/scramble-in'
 ---
 
@@ -32,7 +32,7 @@ import ScrambleIn from '../components/scramble-in'
   }
 </style>
 
-<BaseLayout title="Style guide">
+<FullLayout title="Style guide">
   <main>
     <h1><ScrambleIn text="Alasdair Smith" client:visible /></h1>
     <div class="colours">
@@ -575,4 +575,4 @@ import ScrambleIn from '../components/scramble-in'
 
     <hr />
   </main>
-</BaseLayout>
+</FullLayout>

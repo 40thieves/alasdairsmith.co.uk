@@ -6,6 +6,15 @@ import Footer from './footer.astro'
 const { title } = Astro.props
 ---
 
+<style is:global>
+  /* Expand main to full height of the viewport */
+  body {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    min-height: 100dvh;
+  }
+</style>
+
 <BaseLayout title={title}>
   <Header />
   <main>

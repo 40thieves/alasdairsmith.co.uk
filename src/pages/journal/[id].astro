@@ -15,6 +15,8 @@ const { Content } = await render(journalEntry)
 ---
 
 <FullLayout title={journalEntry.data.title}>
-  <h1>{journalEntry.data.title}</h1>
-  <Content />
+  <article class="flow">
+    <h1>{journalEntry.data.title}</h1>
+    <Content />
+  </article>
 </FullLayout>

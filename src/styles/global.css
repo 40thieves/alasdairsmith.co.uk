@@ -86,6 +86,11 @@ html {
   color: var(--clr-body);
 }
 
+/* Remove body padding, to use full-bleed layout instead */
+body {
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -134,6 +139,11 @@ code,
 kbd,
 samp {
   padding: 0.125rem 0.25rem;
+}
+
+/* Fix width in full-bleed layout */
+hr {
+  inline-size: 100%;
 }
 
 :where(img, figure) + figcaption {

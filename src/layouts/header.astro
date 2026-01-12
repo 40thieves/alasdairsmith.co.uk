@@ -8,8 +8,12 @@ import ScrambleIn from '../components/scramble-in'
     grid-template-columns: minmax(min(100%, 10ch), max-content) 1fr;
     align-items: center;
     gap: 1rem;
+    padding: 2rem;
+    @media (width < 500px) {
+      padding: 1rem;
+    }
+
     margin-block-end: 4rem;
-    padding-block-end: 1.5rem;
     border-block-end: 1px solid var(--clr-primary);
   }
 

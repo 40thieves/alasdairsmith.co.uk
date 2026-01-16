@@ -1,0 +1,51 @@
+---
+import FullLayout from '../layouts/full.astro'
+import Image from 'astro/components/Image.astro'
+import profileImg from '../images/profile.jpg'
+---
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: minmax(5rem, 33%) 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @media (width < 550px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .profile {
+    display: grid;
+    justify-items: center;
+
+    img {
+      border-radius: 9999px;
+
+      @media (width < 550px) {
+        max-inline-size: 66%;
+      }
+    }
+  }
+</style>
+
+<FullLayout>
+  <article>
+    <div class="profile">
+      <Image src={profileImg} alt="Alasdair Smith" />
+    </div>
+    <div class="flow">
+      <p>Hi, I'm Alasdair Smith, although I usually go by Ali.</p>
+
+      <p>
+        I'm a frontend-focused engineer and leader at <a
+          href="https://natcapresearch.com/">Natcap</a
+        >. I'm volunteer at <a href="https://codeyourfuture.io/"
+          >Code Your Future</a
+        >, as a teacher and core maintainer on the Curriculum Team. I enjoy
+        getting outdoors, hiking and running.
+      </p>
+    </div>
+  </article>
+</FullLayout>

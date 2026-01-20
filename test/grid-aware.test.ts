@@ -41,6 +41,10 @@ beforeEach(() => {
 
   ga = new GridAware({
     session: session,
+    apiCredentials: {
+      username: 'API_USERNAME',
+      password: 'API_PASSWORD'
+    },
     getGeo: getGeo as unknown as () => GridAwareGeo
   })
 })

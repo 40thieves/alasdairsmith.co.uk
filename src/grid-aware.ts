@@ -13,8 +13,14 @@ export declare class GridAwareSession<T> {
   has(key: string): Promise<boolean>
 }
 
+export interface GridAwareAPICredentials {
+  username: string
+  password: string
+}
+
 export interface GridAwareContext {
   session: GridAwareSession<string>
+  apiCredentials: GridAwareAPICredentials
   getGeo(): GridAwareGeo
 }
 
@@ -43,7 +49,7 @@ export class GridAware {
     const res = await fetch('https://api.watttime.org/login', {
       headers: {
         Authorization: `Basic ${btoa(
-          `${import.meta.env.API_USERNAME}:${import.meta.env.API_PASSWORD}`
+          `${this.context.apiCredentials.username}:${this.context.apiCredentials.password}`
         )}`
       }
     })

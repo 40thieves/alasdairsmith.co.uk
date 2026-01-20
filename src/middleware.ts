@@ -35,6 +35,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
         } catch (e) {}
       }
       const { longitude, latitude } = context.locals.netlify.context.geo
+      console.log('from netlify geo', longitude, latitude)
       return { longitude, latitude }
     }
   })

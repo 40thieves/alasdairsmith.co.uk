@@ -31,6 +31,7 @@ export class GridAware {
     const { longitude, latitude } = this.context.getGeo()
 
     if (!isLongitude(longitude) || !isLatitude(latitude)) {
+      console.error(longitude, latitude)
       throw new Error('Lng/Lat malformed')
     }
 

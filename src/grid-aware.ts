@@ -159,11 +159,11 @@ function isLongitude(lng: unknown): lng is number {
     lng,
     typeof lng === 'number',
     Number.isFinite(lng),
-    lng >= 0,
+    lng >= -180,
     lng <= 180
   )
   return (
-    typeof lng === 'number' && Number.isFinite(lng) && lng >= 0 && lng <= 180
+    typeof lng === 'number' && Number.isFinite(lng) && lng >= -180 && lng <= 180
   )
 }
 

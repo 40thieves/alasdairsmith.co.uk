@@ -28,8 +28,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const gridAware = new GridAware({
     session: context.session as GridAwareSession<string>,
     apiCredentials: {
-      username: import.meta.env.API_USERNAME,
-      password: import.meta.env.API_PASSWORD
+      username: import.meta.env.WATTTIME_API_USERNAME,
+      password: import.meta.env.WATTTIME_API_PASSWORD
     },
     getGeo: () => {
       // Allow overriding via DEV_GEO env var

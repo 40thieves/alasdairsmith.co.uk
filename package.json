@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest"
   },
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
   "license": "Parity-6.0.0",
@@ -17,5 +18,9 @@
     "@turf/boolean-point-in-polygon": "^7.3.2",
     "astro": "^5.16.6",
     "preact": "^10.28.1"
+  },
+  "devDependencies": {
+    "msw": "^2.12.7",
+    "vitest": "^4.0.17"
   }
 }

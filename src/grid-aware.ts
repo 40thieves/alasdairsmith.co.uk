@@ -31,7 +31,6 @@ export class GridAware {
     const { longitude, latitude } = this.context.getGeo()
 
     if (!isLongitude(longitude) || !isLatitude(latitude)) {
-      console.error(longitude, latitude)
       throw new Error('Lng/Lat malformed')
     }
 
@@ -155,13 +154,6 @@ function getRegion(geolocation: { latitude: number; longitude: number }) {
 }
 
 function isLongitude(lng: unknown): lng is number {
-  console.log(
-    lng,
-    typeof lng === 'number',
-    Number.isFinite(lng),
-    lng >= -180,
-    lng <= 180
-  )
   return (
     typeof lng === 'number' && Number.isFinite(lng) && lng >= -180 && lng <= 180
   )

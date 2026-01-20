@@ -1,5 +1,7 @@
 ---
 import ScrambleIn from '../components/scramble-in'
+
+const co2AboveThreshold = Astro.locals.co2AboveThreshold
 ---
 
 <style>
@@ -48,7 +50,13 @@ import ScrambleIn from '../components/scramble-in'
 </style>
 
 <header>
-  <a href="/" class="ident"><ScrambleIn text="Alasdair Smith" client:load /></a>
+  <a href="/" class="ident">
+    <ScrambleIn
+      text="Alasdair Smith"
+      enabled={!co2AboveThreshold}
+      client:load
+    />
+  </a>
   <!-- Not implemented -->
   <!-- <nav aria-label="Main">
     <a href="/journal">Journal</a>

@@ -8,6 +8,12 @@ interface ScrambleInProps {
   possibleScrambledChars?: string
 }
 
+/**
+ * Animates given text letter-by-letter with a "scramble" animation.
+ *
+ * Heavily modified from https://www.fancycomponents.dev/docs/components/text/scramble-in.
+ * Fixed some bugs/dead code and switched to use a requestAnimationFrame.
+ */
 const ScrambleIn = forwardRef<HTMLSpanElement, ScrambleInProps>(
   (
     {
@@ -121,4 +127,26 @@ function useThrottledAnimationFrame(animateCb: () => void, maxWait: number) {
   return cancel
 }
 
-export default ScrambleIn
+interface GridAwareScrambleInProps extends ScrambleInProps {
+  enabled: boolean
+}
+
+/**
+ * Wrap ScambleIn component with conditional that determines if the animation
+ * should play or not.
+ *
+ * This is intended to be used with the Grid Aware middleware, disabling the
+ * animation if above the threshold.
+ */
+const GridAwareScrambleIn = forwardRef<
+  HTMLSpanElement,
+  GridAwareScrambleInProps
+>(({ enabled, text, ...restProps }, ref) => {
+  if (enabled) {
+    return <ScrambleIn text={text} {...restProps} ref={ref} />
+  } else {
+    return text
+  }
+})
+
+export default GridAwareScrambleIn

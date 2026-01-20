@@ -53,7 +53,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
       { maxAge: COOKIE_MAX_AGE }
     )
   } catch (e) {
-    console.error('Error from GridAware, skipping grid-aware check')
+    console.error('Error from GridAware, skipping grid-aware check', e)
   }
 
   return next()

@@ -155,6 +155,12 @@ function getRegion(geolocation: { latitude: number; longitude: number }) {
 }
 
 function isLongitude(lng: unknown): lng is number {
+  console.log(
+    typeof lng === 'number',
+    Number.isFinite(lng),
+    lng >= 0,
+    lng <= 180
+  )
   return (
     typeof lng === 'number' && Number.isFinite(lng) && lng >= 0 && lng <= 180
   )

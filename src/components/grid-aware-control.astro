@@ -1,0 +1,71 @@
+---
+const co2AboveThreshold = Astro.locals.co2AboveThreshold
+---
+
+<style>
+  details {
+    display: grid;
+    gap: 0.5rem;
+
+    font-size: 0.75em;
+
+    margin-inline: 2rem;
+    @media (width < 500px) {
+      margin-inline: 1rem;
+    }
+    padding: 0 0.5rem 0.5rem;
+
+    border-end-start-radius: 0.5rem;
+    border-end-end-radius: 0.5rem;
+
+    --summary-content: '▸';
+    &[open] {
+      --summary-content: '▾';
+      background-color: var(--clr-primary);
+    }
+  }
+
+  summary {
+    justify-self: center;
+    display: inline-flex;
+    gap: 0.25rem;
+    background-color: var(--clr-primary);
+    padding-inline: 0.5rem;
+    border-end-start-radius: 0.5rem;
+    border-end-end-radius: 0.5rem;
+
+    &:before {
+      content: var(--summary-content);
+      text-box-trim: trim-both;
+    }
+  }
+</style>
+
+<grid-aware-control data-co2-above-threshold={co2AboveThreshold}>
+  <details>
+    <summary>Grid Aware</summary>
+    <div>
+      This site is Grid Aware, meaning that it changes its design based on the
+      quantity of fossil fuels on your nearest energy grid.
+    </div>
+  </details>
+</grid-aware-control>
+
+<script>
+  class GridAwareControl extends HTMLElement {
+    constructor() {
+      super()
+    }
+
+    private $summary = this.querySelector('summary')
+
+    connectedCallback() {
+      const co2AboveThreshold = this.dataset.co2AboveThreshold
+      if (this.$summary) {
+        this.$summary.textContent = `Grid Aware: ${co2AboveThreshold ? 'High carbon' : 'Low carbon'}`
+      }
+    }
+  }
+
+  customElements.define('grid-aware-control', GridAwareControl)
+</script>

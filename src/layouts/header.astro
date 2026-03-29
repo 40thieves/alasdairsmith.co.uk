@@ -5,7 +5,7 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
 ---
 
 <style>
-  header {
+  nav {
     display: grid;
     grid-template-columns: minmax(min(100%, 10ch), max-content) 1fr;
     align-items: center;
@@ -36,7 +36,8 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
     }
   }
 
-  nav {
+  /* Not implemented */
+  /* ul {
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
@@ -46,20 +47,22 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
     place-items: center;
     gap: 0.5rem;
     list-style: none;
-  }
+  } */
 </style>
 
 <header>
-  <a href="/" class="ident">
-    <ScrambleIn
-      text="Alasdair Smith"
-      enabled={!co2AboveThreshold}
-      client:load
-    />
-  </a>
-  <!-- Not implemented -->
-  <!-- <nav aria-label="Main">
-    <a href="/journal">Journal</a>
-    <a href="/notes">Notes</a>
-  </nav> -->
+  <nav>
+    <a href="/" class="ident">
+      <ScrambleIn
+        text="Alasdair Smith"
+        enabled={!co2AboveThreshold}
+        client:load
+      />
+    </a>
+    <!-- Not implemented -->
+    <!-- <ul aria-label="Main">
+      <li><a href="/journal">Journal</a></li>
+      <li><a href="/notes">Notes</a></li>
+    </ul> -->
+  </nav>
 </header>

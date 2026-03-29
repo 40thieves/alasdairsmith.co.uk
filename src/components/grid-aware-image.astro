@@ -1,10 +1,10 @@
 ---
 import Image from 'astro/components/Image.astro'
 
+const co2Disabled = Astro.locals.co2Disabled
 const co2AboveThreshold = Astro.locals.co2AboveThreshold
-const forceImages = Astro.url.searchParams.get('force-images') === 'true'
 
-const showPlaceholder = !forceImages && co2AboveThreshold
+const showPlaceholder = !co2Disabled && co2AboveThreshold
 
 // Same props as Astro's <Image />
 interface Props {
@@ -41,7 +41,7 @@ const aspectRatio =
   showPlaceholder ? (
     <div class="placeholder" style={`aspect-ratio: ${aspectRatio}`}>
       {alt}
-      <a href="?force-images=true">Show images</a>
+      <a href="?grid-aware-disabled=true">Show images</a>
     </div>
   ) : (
     <Image src={src} alt={alt} />

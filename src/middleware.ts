@@ -5,8 +5,20 @@ import { GridAware, GridAwareSession } from './grid-aware'
 const COOKIE_MAX_AGE = 3_600 // (1 hour)
 
 export const onRequest = defineMiddleware(async (context, next) => {
+  if (
+    new URL(context.request.url).searchParams.get('grid-aware-disabled') ===
+    'true'
+  ) {
+    console.warn(
+      'Grid aware disabled by request query, skipping grid-aware check'
+    )
+    context.locals.co2Disabled = false
+    return next()
+  }
+
   if (import.meta.env.DISABLE_GRID_AWARE === 'true') {
-    console.warn('Grid aware disabled, skipping grid-aware check')
+    console.warn('Grid aware disabled by env, skipping grid-aware check')
+    context.locals.co2Disabled = false
     return next()
   }
 

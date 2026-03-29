@@ -1,4 +1,5 @@
 ---
+const co2Disabled = Astro.locals.co2Disabled
 const co2AboveThreshold = Astro.locals.co2AboveThreshold
 ---
 
@@ -41,7 +42,10 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
   }
 </style>
 
-<grid-aware-control data-co2-above-threshold={co2AboveThreshold}>
+<grid-aware-control
+  data-co2-above-threshold={co2AboveThreshold}
+  data-co2-disabled={co2Disabled}
+>
   <details>
     <summary>Grid Aware</summary>
     <div>
@@ -61,8 +65,15 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
 
     connectedCallback() {
       const co2AboveThreshold = this.dataset.co2AboveThreshold
+      const co2Disabled = this.dataset.co2Disabled
+
       if (this.$summary) {
-        this.$summary.textContent = `Grid Aware: ${co2AboveThreshold ? 'High carbon' : 'Low carbon'}`
+        const status = co2Disabled
+          ? 'Disabled'
+          : co2AboveThreshold
+            ? 'High carbon'
+            : 'Low carbon'
+        this.$summary.textContent = `Grid Aware: ${status}`
       }
     }
   }

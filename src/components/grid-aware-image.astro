@@ -1,0 +1,49 @@
+---
+import Image from 'astro/components/Image.astro'
+
+const co2AboveThreshold = Astro.locals.co2AboveThreshold
+const forceImages = Astro.url.searchParams.get('force-images') === 'true'
+
+const showPlaceholder = !forceImages && co2AboveThreshold
+
+// Same props as Astro's <Image />
+interface Props {
+  // Technically Astro also supports a plain string, but then we can't get the
+  // image dimensions for aspect-ratio calculation (see below)
+  src: ImageMetadata | Promise<{ default: ImageMetadata }>
+  alt: string
+}
+const { src, alt } = Astro.props
+
+// Create aspect-ratio CSS value based on image's dimensions (resolving any
+// promised-modules)
+const resolvedSrc = await src
+const aspectRatio =
+  'default' in resolvedSrc
+    ? `${resolvedSrc.default.width} / ${resolvedSrc.default.height}`
+    : `${resolvedSrc.width} / ${resolvedSrc.height}`
+---
+
+<style>
+  .placeholder {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--clr-primary);
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+</style>
+
+{
+  showPlaceholder ? (
+    <div class="placeholder" style={`aspect-ratio: ${aspectRatio}`}>
+      {alt}
+      <a href="?force-images=true">Show images</a>
+    </div>
+  ) : (
+    <Image src={src} alt={alt} />
+  )
+}

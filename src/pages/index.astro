@@ -1,7 +1,7 @@
 ---
 import FullLayout from '../layouts/full.astro'
-import Image from 'astro/components/Image.astro'
 import headshotImg from '../images/headshot.jpg'
+import GridAwareImage from '../components/grid-aware-image.astro'
 
 export const prerender = false
 ---
@@ -22,9 +22,8 @@ export const prerender = false
     display: grid;
     justify-items: center;
 
-    img {
+    > * {
       border-radius: 9999px;
-
       @media (width < 550px) {
         max-inline-size: 66%;
       }
@@ -53,7 +52,7 @@ export const prerender = false
 <FullLayout>
   <article>
     <div class="profile">
-      <Image src={headshotImg} alt="Alasdair Smith" />
+      <GridAwareImage src={headshotImg} alt="Alasdair Smith" />
     </div>
     <div class="flow">
       <p>Hi, I'm Alasdair Smith, although I usually go by Ali.</p>

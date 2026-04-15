@@ -1,22 +1,25 @@
 ---
-const co2Disabled = Astro.locals.co2Disabled
-const co2AboveThreshold = Astro.locals.co2AboveThreshold
+const gridAwareDisabled = Astro.locals.gridAwareDisabled
+const gridAwareCarbonIntensityLevel = Astro.locals.gridAwareCarbonIntensityLevel
 ---
 
 <!-- Unfortunately it appears because define:vars forces is:inline, meaning
 that the script is injected as-is, TS intentionally isn't run. See:
 https://github.com/withastro/language-tools/issues/755 -->
-<script define:vars={{ co2Disabled, co2AboveThreshold }} is:inline>
+<script
+  define:vars={{ gridAwareDisabled, gridAwareCarbonIntensityLevel }}
+  is:inline
+>
   window.CSS.registerProperty({
-    name: '--grid-aware-co2-disabled',
+    name: '--grid-aware-disabled',
     syntax: 'true | false',
     inherits: false,
-    initialValue: co2Disabled ? 'true' : 'false'
+    initialValue: gridAwareDisabled ? 'true' : 'false'
   })
   window.CSS.registerProperty({
-    name: '--grid-aware-co2-above-threshold',
-    syntax: 'true | false',
+    name: '--grid-aware-carbon-intensity-level',
+    syntax: '*',
     inherits: false,
-    initialValue: co2AboveThreshold ? 'true' : 'false'
+    initialValue: gridAwareCarbonIntensityLevel ?? ''
   })
 </script>

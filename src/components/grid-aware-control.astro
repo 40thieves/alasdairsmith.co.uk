@@ -1,6 +1,6 @@
 ---
-const co2Disabled = Astro.locals.co2Disabled
-const co2AboveThreshold = Astro.locals.co2AboveThreshold
+const gridAwareDisabled = Astro.locals.gridAwareDisabled
+const gridAwareCarbonIntensityLevel = Astro.locals.gridAwareCarbonIntensityLevel
 ---
 
 <style>
@@ -43,8 +43,8 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
 </style>
 
 <grid-aware-control
-  data-co2-above-threshold={co2AboveThreshold}
-  data-co2-disabled={co2Disabled}
+  data-carbon-intensity-level={gridAwareCarbonIntensityLevel}
+  data-disabled={gridAwareDisabled}
 >
   <details>
     <summary>Grid Aware</summary>
@@ -56,6 +56,10 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
 </grid-aware-control>
 
 <script>
+  function toSentenceCase(input: string) {
+    return input.charAt(0).toUpperCase() + input.substring(1)
+  }
+
   class GridAwareControl extends HTMLElement {
     constructor() {
       super()
@@ -64,15 +68,15 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
     private $summary = this.querySelector('summary')
 
     connectedCallback() {
-      const co2AboveThreshold = this.dataset.co2AboveThreshold
-      const co2Disabled = this.dataset.co2Disabled
+      const disabled = this.dataset.disabled === 'true'
+      const carbonIntensityLevel = this.dataset.carbonIntensityLevel
 
       if (this.$summary) {
-        const status = co2Disabled
-          ? 'Disabled'
-          : co2AboveThreshold
-            ? 'High carbon'
-            : 'Low carbon'
+        let status = 'Disabled'
+        if (disabled && carbonIntensityLevel != null) {
+          status = `${toSentenceCase(carbonIntensityLevel)} carbon`
+        }
+
         this.$summary.textContent = `Grid Aware: ${status}`
       }
     }

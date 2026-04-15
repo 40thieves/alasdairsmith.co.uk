@@ -2,7 +2,7 @@
 import GridAwareControl from '../components/grid-aware-control.astro'
 import ScrambleIn from '../components/scramble-in'
 
-const co2AboveThreshold = Astro.locals.co2AboveThreshold
+const scrambleInEnabled = Astro.locals.gridAwareCarbonIntensityLevel !== 'high'
 ---
 
 <style>
@@ -59,7 +59,7 @@ const co2AboveThreshold = Astro.locals.co2AboveThreshold
     <a href="/" class="ident">
       <ScrambleIn
         text="Alasdair Smith"
-        enabled={!co2AboveThreshold}
+        enabled={!scrambleInEnabled}
         client:load
       />
     </a>

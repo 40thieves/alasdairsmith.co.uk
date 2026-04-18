@@ -11,3 +11,10 @@ afterAll(() => mockRequest.close())
 
 // Reset handlers after each test for test isolation
 afterEach(() => mockRequest.resetHandlers())
+
+// Enable debugging logging for MSW
+if (process.env.DEBUG_MSW) {
+  mockRequest.events.on('request:start', ({ request }) => {
+    console.log('Outgoing:', request.method, request.url)
+  })
+}

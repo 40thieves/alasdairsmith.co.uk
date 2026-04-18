@@ -73,7 +73,7 @@ const gridAwareCarbonIntensityLevel = Astro.locals.gridAwareCarbonIntensityLevel
 
       if (this.$summary) {
         let status = 'Disabled'
-        if (disabled && carbonIntensityLevel != null) {
+        if (!disabled && carbonIntensityLevel != null) {
           status = `${toSentenceCase(carbonIntensityLevel)} carbon`
         }
 

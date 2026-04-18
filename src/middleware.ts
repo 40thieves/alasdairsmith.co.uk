@@ -1,6 +1,6 @@
 import { defineMiddleware } from 'astro:middleware'
 
-import { GridAwareElectricityMaps, GridAwareSession } from './grid-aware-2'
+import { GridAware } from './grid-aware'
 
 const GRID_AWARE_COOKIE_NAME = 'grid-aware-co2'
 const GRID_AWARE_COOKIE_MAX_AGE = 3_600 // 1 hour
@@ -38,12 +38,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return next()
   }
 
-  const gridAware = new GridAwareElectricityMaps({
-    session: context.session as GridAwareSession<string>,
-    apiCredentials: {
-      username: import.meta.env.WATTTIME_API_USERNAME,
-      password: import.meta.env.WATTTIME_API_PASSWORD
-    },
+  const gridAware = new GridAware({
+    apiKey: import.meta.env.ELECTRICITY_MAPS_API_KEY,
     getGeo: () => {
       // Allow overriding via DEV_GEO env var
       if (import.meta.env.DEV_GEO != null) {

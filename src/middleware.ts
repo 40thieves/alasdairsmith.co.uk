@@ -1,6 +1,6 @@
 import { defineMiddleware } from 'astro:middleware'
 
-import { GridAware } from './grid-aware'
+import { gridAwareCheck } from './grid-aware'
 
 const GRID_AWARE_COOKIE_NAME = 'grid-aware-co2'
 const GRID_AWARE_COOKIE_MAX_AGE = 3_600 // 1 hour
@@ -38,22 +38,22 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return next()
   }
 
-  const gridAware = new GridAware({
-    apiKey: import.meta.env.ELECTRICITY_MAPS_API_KEY,
-    getGeo: () => {
-      // Allow overriding via DEV_GEO env var
-      if (import.meta.env.DEV_GEO != null) {
-        try {
-          return JSON.parse(import.meta.env.DEV_GEO)
-        } catch (e) {}
-      }
-      const { longitude, latitude } = context.locals.netlify.context.geo
-      return { longitude, latitude }
+  function getGeoFromNetlifyContext() {
+    // Allow overriding via DEV_GEO env var
+    if (import.meta.env.DEV_GEO != null) {
+      try {
+        return JSON.parse(import.meta.env.DEV_GEO)
+      } catch (e) {}
     }
-  })
+    const { longitude, latitude } = context.locals.netlify.context.geo
+    return { longitude, latitude }
+  }
 
   try {
-    const gridAwareCarbonIntensityLevel = await gridAware.check()
+    const gridAwareCarbonIntensityLevel = await gridAwareCheck(
+      getGeoFromNetlifyContext(),
+      import.meta.env.ELECTRICITY_MAPS_API_KEY
+    )
 
     // Make the value available to locals (i.e. in the components)
     context.locals.gridAwareCarbonIntensityLevel = gridAwareCarbonIntensityLevel

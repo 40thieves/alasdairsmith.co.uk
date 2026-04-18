@@ -2,23 +2,15 @@ import { beforeEach, expect, it, vi, type MockInstance } from 'vitest'
 import { http, HttpHandler, HttpResponse } from 'msw'
 
 import { mockRequest } from './setup'
-import { GridAware, type GridAwareGeo } from '../src/grid-aware'
+import { gridAwareCheck, type GridAwareGeo } from '../src/grid-aware'
 
-let getGeo: MockInstance<() => GridAwareGeo>, ga: GridAware
-
-beforeEach(() => {
-  getGeo = vi.fn().mockReturnValue({ longitude: 0, latitude: 51 })
-
-  ga = new GridAware({
-    apiKey: 'API_KEY',
-    getGeo: getGeo as unknown as () => GridAwareGeo
-  })
-})
+const MOCK_API_KEY = 'API_KEY'
+const MOCK_GEO = { longitude: 0, latitude: 51 }
 
 it('returns successfully returns carbon intensity level', async () => {
   withRequests(successfulApiRequest())
 
-  const carbonIntensityLevel = await ga.check()
+  const carbonIntensityLevel = await gridAwareCheck(MOCK_GEO, MOCK_API_KEY)
 
   expect(carbonIntensityLevel).toBe('moderate')
 })
@@ -26,21 +18,19 @@ it('returns successfully returns carbon intensity level', async () => {
 it('calls getGeo from context', async () => {
   withRequests(successfulApiRequest())
 
-  await ga.check()
-
-  expect(getGeo).toHaveBeenCalled()
+  await gridAwareCheck(MOCK_GEO, MOCK_API_KEY)
 })
 
 it('throws if lng/lat from getGeo is invalid', async () => {
-  getGeo.mockReturnValue({ longitude: 190, latitude: -100 })
-
-  await expect(ga.check()).rejects.toThrow('Lng/Lat malformed')
+  await expect(
+    gridAwareCheck({ longitude: 190, latitude: -100 }, MOCK_API_KEY)
+  ).rejects.toThrow('Lng/Lat malformed')
 })
 
 it('throws if API request is unsuccessful', async () => {
   withRequests(unsuccessfulApiRequest())
 
-  await expect(ga.check()).rejects.toThrow(
+  await expect(gridAwareCheck(MOCK_GEO, MOCK_API_KEY)).rejects.toThrow(
     'Error response from carbon intensity level request'
   )
 })

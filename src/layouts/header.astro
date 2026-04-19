@@ -2,7 +2,9 @@
 import GridAwareControl from '../components/grid-aware-control.astro'
 import ScrambleIn from '../components/scramble-in'
 
-const scrambleInEnabled = Astro.locals.gridAwareCarbonIntensityLevel !== 'high'
+const scrambleInEnabled =
+  !Astro.locals.gridAwareDisabled &&
+  Astro.locals.gridAwareCarbonIntensityLevel !== 'high'
 ---
 
 <style>
@@ -59,7 +61,7 @@ const scrambleInEnabled = Astro.locals.gridAwareCarbonIntensityLevel !== 'high'
     <a href="/" class="ident">
       <ScrambleIn
         text="Alasdair Smith"
-        enabled={!scrambleInEnabled}
+        enabled={scrambleInEnabled}
         client:load
       />
     </a>

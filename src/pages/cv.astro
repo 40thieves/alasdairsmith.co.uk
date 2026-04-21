@@ -1,0 +1,95 @@
+---
+import FullLayout from '../layouts/full.astro'
+import NestedList from '../components/nested-list.astro'
+
+import data from '../cv.json'
+---
+
+<style>
+  .education-achievement-category {
+    font-size: 0.75em;
+  }
+</style>
+
+<FullLayout title="CV">
+  <article class="flow">
+    <h1>CV</h1>
+
+    <section aria-labelledby="profile">
+      <h2 id="profile">Professional profile</h2>
+      {data.profile}
+    </section>
+
+    <section aria-labelledby="areas-of-expertise">
+      <h2 id="areas-of-expertise">Areas of expertise</h2>
+      <ul>
+        {data.areas_of_expertise.map((area) => <li>{area}</li>)}
+      </ul>
+    </section>
+
+    <section aria-labelledby="experience" class="flow">
+      <h2 id="experience">Career History</h2>
+
+      {
+        data.career_history.map((experience) => (
+          <section aria-labelledby={experience.id} class="flow">
+            <hgroup>
+              <h3 id={experience.id}>{experience.company.name}</h3>
+              <p>{experience.company.location}</p>
+              {experience.company.description && (
+                <p>{experience.company.description}</p>
+              )}
+            </hgroup>
+
+            {experience.roles.map((role) => (
+              <section aria-labelledby={role.id} class="flow">
+                <h4 id={role.id}>{role.title}</h4>
+                <p>
+                  {role.start_date} - {role.end_date}
+                </p>
+                <NestedList items={role.experience} />
+
+                {'tech_stack' in role && (
+                  <p>Technical stack:</p>
+                  <ul>
+                    {role.tech_stack?.map((technology) => (
+                      <li>{technology}</li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            ))}
+          </section>
+        ))
+      }
+    </section>
+
+    <section aria-labelledby="education-and-achievements" class="flow">
+      <h2 id="education-and-achievements">Education and Achievements</h2>
+      
+      {data.education_and_achievements.map((educationAchievement) => (
+        <section aria-labelledby={educationAchievement.id}>
+          <hgroup>
+            {educationAchievement.category && <p class="education-achievement-category">{educationAchievement.category}</p>}
+            <h3 id={educationAchievement.id}>{educationAchievement.title}</h3>
+          </hgroup>
+          <p>{educationAchievement.description}</p>
+        </section>
+      ))}
+    </section>
+
+    <section aria-labelledby="technical-competencies" class="flow">
+      <h2 id="technical-competencies">Technical Competencies</h2>
+
+      {data.technical_competencies.map((competency) => (
+        <section aria-labelledby={competency.category.toLowerCase()}>
+          <p id={competency.category.toLowerCase()}>{competency.category}:</p>
+          <ul>
+            {competency.technologies.map((technology) => <li>{technology}</li>)}
+          </ul>
+        </section>
+
+      ))}
+    </section>
+  </article>
+</FullLayout>

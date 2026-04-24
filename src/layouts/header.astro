@@ -1,0 +1,75 @@
+---
+import GridAwareControl from '../components/grid-aware-control.astro'
+import ScrambleIn from '../components/scramble-in'
+
+const scrambleInEnabled =
+  !Astro.locals.gridAwareDisabled &&
+  Astro.locals.gridAwareCarbonIntensityLevel !== 'high'
+---
+
+<style>
+  header {
+    margin-block-end: 4rem;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: minmax(min(100%, 10ch), max-content) 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    @media (width < 500px) {
+      padding: 1rem;
+    }
+
+    border-block-end: 1px solid var(--clr-primary);
+  }
+
+  .ident {
+    font-family: var(--fnt-serif);
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 1.1;
+    text-wrap: balance;
+    margin-block-start: 0;
+    letter-spacing: clamp(-0.03em, calc((1em - 1rem) / -10), 0em);
+
+    color: var(--clr-body);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--clr-primary);
+    }
+  }
+
+  /* Not implemented */
+  /* ul {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 10ch), max-content)
+    );
+    justify-content: end;
+    place-items: center;
+    gap: 0.5rem;
+    list-style: none;
+  } */
+</style>
+
+<header>
+  <nav>
+    <a href="/" class="ident">
+      <ScrambleIn
+        text="Alasdair Smith"
+        enabled={scrambleInEnabled}
+        client:load
+      />
+    </a>
+    <!-- Not implemented -->
+    <!-- <ul aria-label="Main">
+      <li><a href="/journal">Journal</a></li>
+      <li><a href="/notes">Notes</a></li>
+    </ul> -->
+  </nav>
+  <GridAwareControl />
+</header>

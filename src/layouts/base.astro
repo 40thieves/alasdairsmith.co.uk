@@ -1,0 +1,45 @@
+---
+import '../styles/reset.css'
+import '../styles/utilities.css'
+import '../styles/global.css'
+
+import GridAwareStyles from '../components/grid-aware-styles.astro'
+
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <GridAwareStyles />
+
+    <meta
+      name="description"
+      content="Alasdair Smith is a frontend-focused engineer and leader based in London"
+    />
+    <meta name="author" content="Alasdair Smith" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link
+      rel="shortcut icon"
+      href="/icon.png"
+      sizes="300x300"
+      type="image/png"
+    />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <title>
+      {title && `${title} |`} Alasdair Smith
+    </title>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>

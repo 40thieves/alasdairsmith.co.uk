@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content'
+import FullLayout from '../../layouts/full.astro'
+
+export async function getStaticPaths() {
+  const journalEntries = await getCollection('journalEntries')
+  return journalEntries.map((journalEntry) => ({
+    params: { id: journalEntry.id },
+    props: { journalEntry }
+  }))
+}
+
+const { journalEntry } = Astro.props
+const { Content } = await render(journalEntry)
+---
+
+<FullLayout title={journalEntry.data.title}>
+  <article class="flow">
+    <h1>{journalEntry.data.title}</h1>
+    <Content />
+  </article>
+</FullLayout>

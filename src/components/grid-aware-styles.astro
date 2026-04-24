@@ -1,0 +1,48 @@
+---
+const gridAwareDisabled = Astro.locals.gridAwareDisabled
+const gridAwareCarbonIntensityLevel = Astro.locals.gridAwareCarbonIntensityLevel
+---
+
+<style is:global>
+  /*
+    Disable global animations when carbon intensity is above high threshold.
+    Inspired by https://csswizardry.com/Obs.js/demo/
+  */
+  @container style(--grid-aware-carbon-intensity-level: high) {
+    /*
+      Container style queries against CSS variables appear to work even when not
+      targeting a container
+    */
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+
+    @view-transition {
+      navigation: none;
+    }
+  }
+</style>
+
+<!-- Unfortunately it appears because define:vars forces is:inline, meaning
+that the script is injected as-is, TS intentionally isn't run. See:
+https://github.com/withastro/language-tools/issues/755 -->
+<script
+  define:vars={{ gridAwareDisabled, gridAwareCarbonIntensityLevel }}
+  is:inline
+>
+  window.CSS.registerProperty({
+    name: '--grid-aware-disabled',
+    syntax: 'true | false',
+    inherits: false,
+    initialValue: gridAwareDisabled ? 'true' : 'false'
+  })
+  window.CSS.registerProperty({
+    name: '--grid-aware-carbon-intensity-level',
+    syntax: '*',
+    inherits: false,
+    initialValue: gridAwareCarbonIntensityLevel ?? ''
+  })
+</script>

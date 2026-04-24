@@ -1,0 +1,21 @@
+---
+interface Props {
+  items: (string | string[])[]
+}
+const { items } = Astro.props
+---
+
+<style>
+  ul {
+    list-style-position: outside;
+    margin-inline-start: 2ch;
+  }
+</style>
+
+<ul>
+  {
+    items.map((item) =>
+      Array.isArray(item) ? <Astro.self items={item} /> : <li>{item}</li>
+    )
+  }
+</ul>

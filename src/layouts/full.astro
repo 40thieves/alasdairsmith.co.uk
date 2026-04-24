@@ -1,0 +1,52 @@
+---
+import BaseLayout from './base.astro'
+import Header from './header.astro'
+import Footer from './footer.astro'
+
+const { title } = Astro.props
+---
+
+<style>
+  /* Global to be able to style elements "above" the template in the tree */
+  :global(body) {
+    /* Expand main to full height of the viewport */
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    min-height: 100dvh;
+  }
+
+  main {
+    /* Full-bleed layout with breakouts, adapted from https://ryanmulligan.dev/blog/layout-breakouts/ */
+    --fullbleed-layout-gutter: clamp(1rem, 6vw, 3rem);
+    --fullbleed-layout-full: minmax(var(--fullbleed-layout-gutter), 1fr);
+    --fullbleed-layout-content: min(
+      70ch,
+      100% - var(--fullbleed-layout-gutter) * 2
+    );
+    --fullbleed-layout-feature: minmax(0, 5rem);
+
+    display: grid;
+    grid-template-columns:
+      [full-start] var(--fullbleed-layout-full)
+      [feature-start] var(--fullbleed-layout-feature)
+      [content-start] var(--fullbleed-layout-content) [content-end]
+      var(--fullbleed-layout-feature) [feature-end]
+      var(--fullbleed-layout-full) [full-end];
+  }
+
+  /*
+   * Sets all direct children to follow the content width. Global to apply to
+   * all sub templates.
+   */
+  :global(main > *) {
+    grid-column: content;
+  }
+</style>
+
+<BaseLayout title={title}>
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>

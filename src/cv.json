@@ -1,0 +1,224 @@
+{
+  "profile": "Versatile frontend-focused engineer recognised for leading teams creating robust, scalable and beautiful user-focused applications. Leveraging strong technical acumen, guided teams to conceptualise, plan and implement high-impact solutions and proofs of concept. Lifelong learner whose passion for technology sparked at an early age, informing a deep-rooted curiosity and commitment to technical advancement in the engineering landscape.",
+  "areas_of_expertise": [
+    "Frontend Applications",
+    "JavaScript/TypeScript, HTML, CSS",
+    "Strategic Planning",
+    "Technical Innovation, Proofs of Concept",
+    "Technical Mentorship, Coaching",
+    "Product Engineering Strategy",
+    "Software Development Lifecycle",
+    "Agile and Scrum Methodologies",
+    "Cloud Infrastructure, Scaling",
+    "Database Management, Optimisation"
+  ],
+  "career_history": [
+    {
+      "id": "natcap",
+      "company": {
+        "name": "Natcap",
+        "description": "Nature Intelligence SaaS platform helping some of the largest global enterprises measure their impact on nature.",
+        "location": "London, UK (Hybrid)"
+      },
+      "roles": [
+        {
+          "id": "natcap-ic",
+          "title": "Staff Product Engineer",
+          "start_date": "Sep 2024",
+          "end_date": "Present",
+          "experience": [
+            "Design and build a new Risk product, used by 8 multinationals to assess critical business risks.",
+            [
+              "Lead product development of data-rich customer insights in close collaboration with Product Manager & Designer.",
+              "Drive adoption of low-code tools to accelerate prototyping and shorten iteration cycles."
+            ],
+            "Assume interim leadership responsibilities following CTO’s departure, covering both management and technology strategy for a ten-member team.",
+            [
+              "Successfully designed & delivered three significant new features within a single quarter.",
+              "Establish product roadmapping process in response to misaligned business, product and technology strategies."
+            ],
+            "Deliver a significant refactor to unlock a strategically important organisation feature.",
+            "Strengthen backend expertise, gaining experience with Python FastAPI, SQLAlchemy and Pytest."
+          ],
+          "tech_stack": [
+            "TypeScript",
+            "React",
+            "Apollo GraphQL",
+            "Python",
+            "PostgreSQL",
+            "SQLAlchemy",
+            "Helm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "overleaf",
+      "company": {
+        "name": "Overleaf",
+        "description": "Collaborative LaTeX editor used by 16 million students and academics at 6,800 institutions worldwide.",
+        "location": "Remote (UK Based)"
+      },
+      "roles": [
+        {
+          "id": "overleaf-em",
+          "title": "Engineering Manager & Staff Frontend Engineer",
+          "start_date": "Oct 2020",
+          "end_date": "Aug 2024",
+          "note": "Progressed from a role dedicated to post-acquisition system integration and v2 release into a broader leadership role with frontend strategy focus, particularly optimising and modernising legacy technology.",
+          "experience": [
+            "Overhauled legacy frontend systems to improve the user experience and support the scalability of core revenue-generating technology that supports over half a million daily users.",
+            [
+              "Enabled 45% y-o-y growth in revenue and user base through improved developer and user experiences.",
+              "Led phased migration from legacy Angular v1 to React to massively increase test coverage, security, and developer productivity.",
+              "Rewrote core editor, using modernised CodeMirror 6 library, unlocking key business milestones and long-requested new features.",
+              "Implemented frontend test harness using Mocha/Chai/Sinon/JSDOM, enabling test-driven culture and taking number of tests from none to over several thousand.",
+              "Introduced formatting/linting tools such as Prettier & ESLint to make code review more efficient."
+            ],
+            "Partnered with executives, product and UX teams to prioritise roadmap and guide technical strategy while championing user-focused and iterative development.",
+            [
+              "Created and drove technical strategy, prioritising projects based on engineering input and business strategy.",
+              "Served as the go-to technical resource for frontend React-focused development and legacy code refactoring"
+            ],
+            "Built and led a highly-engaged, scalable seven-member engineering team from the ground up.",
+            [
+              "Drove team recruitment, culture-building, performance, and growth to foster skill development and productivity."
+            ]
+          ],
+          "tech_stack": [
+            "JavaScript/TypeScript",
+            "React",
+            "HTML",
+            "CSS",
+            "NodeJS",
+            "Ruby on Rails",
+            "MongoDB",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "id": "overleaf-ic",
+          "title": "Senior Engineer",
+          "start_date": "Feb 2016",
+          "end_date": "Oct 2020",
+          "experience": [
+            "Orchestrated transition from Overleaf v1 to a combined v2 platform released after acquisition of ShareLaTeX, managing integration, user migration, and legacy feature protection while introducing new functionalities.",
+            [
+              "Integrated two complex products in just two years, reducing cognitive overhead and streamlining redundancies created by the acquisition.",
+              "Transitioned a pivotal user-facing WYSIWYG-esque editor into the consolidated codebase, devising and executing the launch plan to facilitate the migration of tens of millions of user accounts and projects.",
+              "Implemented new project history view in React, allowing users to easily see and restore previous versions. ",
+              "Upgraded build system from outdated Grunt/RequireJS to Webpack for improved developer experience and reliability as well as reduced bundle size."
+            ],
+            "Served as the frontend expert across the rapidly growing start-up, sharing knowledge and best practices as a technical mentor leading regular lunch-and-learns and other professional development initiatives."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "radweb",
+      "company": {
+        "name": "Radweb Ltd.",
+        "location": "Portsmouth, UK"
+      },
+      "roles": [
+        {
+          "id": "radweb-ic",
+          "title": "Web Developer",
+          "start_date": "June 2013",
+          "end_date": "Feb 2016",
+          "experience": [
+            "Led design and development of web applications and new features using Backbone.js, Laravel PHP, and MySQL."
+          ]
+        }
+      ]
+    }
+  ],
+  "education_and_achievements": [
+    {
+      "id": "university-of-portsmouth",
+      "title": "University of Portsmouth",
+      "description": "Bachelor of Science in Web Technologies"
+    },
+    {
+      "id": "ldx3",
+      "category": "Conference Speaking",
+      "title": "LDX3 (Formerly Lead Dev London), London, June 2025",
+      "description": "Spoke at a large engineering leadership-focused conference, introducing pedagogical concepts in the context of software engineering. Talk title: Creating the next generation of Senior Engineers."
+    },
+    {
+      "id": "code-your-future",
+      "category": "Community Enrichment",
+      "title": "Code Your Future, Core Maintainer, Technical Education",
+      "description": "Initiate the Tech Ed Syllabus team to lead enhancement of core technical education curriculum; develop learning materials and instruct students in HTML, CSS, JavaScript, React, NodeJS to contribute to a 70% employment rate among trainees."
+    }
+  ],
+  "technical_competencies": [
+    {
+      "category": "Languages",
+      "technologies": [
+        "JavaScript/TypeScript",
+        "HTML",
+        "CSS",
+        "Sass",
+        "Less",
+        "Pug",
+        "Python",
+        "Ruby"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "technologies": [
+        "React",
+        "NodeJS",
+        "Express",
+        "CodeMirror (v5 & v6)",
+        "Ace",
+        "Remix",
+        "Ruby on Rails",
+        "FastAPI"
+      ]
+    },
+    {
+      "category": "Testing",
+      "technologies": [
+        "Mocha",
+        "Sinon",
+        "Chai",
+        "JSDOM",
+        "Cypress",
+        "Prettier",
+        "ESLint",
+        "Jest",
+        "Pytest"
+      ]
+    },
+    {
+      "category": "Databases",
+      "technologies": ["PostgreSQL", "SQLAlchemy", "MongoDB", "MySQL"]
+    },
+    {
+      "category": "Tools/Technologies",
+      "technologies": [
+        "Git",
+        "GitHub",
+        "webpack",
+        "Babel",
+        "Bootstrap",
+        "Docker",
+        "Helm",
+        "Kubernetes"
+      ]
+    },
+    {
+      "category": "Best Practices",
+      "technologies": [
+        "Frontend bundling",
+        "Frontend testing",
+        "Accessibility",
+        "Code review",
+        "Frontend performance"
+      ]
+    }
+  ]
+}

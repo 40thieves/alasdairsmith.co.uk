@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'iA Writer Duo';
+  src: url('/fonts/iAWriterDuoS-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'iA Writer Duo';
+  src: url('/fonts/iAWriterDuoS-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'iA Writer Duo';
+  src: url('/fonts/iAWriterDuoS-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'iA Writer Duo';
+  src: url('/fonts/iAWriterDuoS-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope.woff2') format('woff2-variations');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}
+
+@layer reset, utilities;
+
+html {
+  --hue-orange: 36;
+  --clr-orange-100: light-dark(
+    oklch(0.57 0.2 var(--hue-orange)),
+    oklch(0.7 0.17 var(--hue-orange))
+  );
+  --clr-orange-200: light-dark(
+    oklch(0.55 0.27 var(--hue-orange)),
+    oklch(0.65 0.19 var(--hue-orange))
+  );
+  --clr-orange-300: light-dark(
+    oklch(0.3 0.35 var(--hue-orange)),
+    oklch(0.6 0.21 var(--hue-orange))
+  );
+
+  --hue-blue: 243;
+  --clr-blue-100: light-dark(
+    oklch(0.52 0.2 var(--hue-blue)),
+    oklch(0.7 0.25 var(--hue-blue))
+  );
+  --clr-blue-200: light-dark(
+    oklch(0.45 0.25 var(--hue-blue)),
+    oklch(0.6 0.25 var(--hue-blue))
+  );
+  --clr-blue-300: light-dark(
+    oklch(0.35 0.3 var(--hue-blue)),
+    oklch(0.58 0.35 var(--hue-blue))
+  );
+
+  --clr-primary: var(--clr-orange-200);
+  --clr-secondary: var(--clr-blue-200);
+
+  --clr-white: oklch(0.9764 0.0125 var(--hue-orange));
+  --clr-black: oklch(0.1218 0.0429 var(--hue-orange));
+
+  --clr-body: light-dark(var(--clr-black), var(--clr-white));
+  --clr-background: light-dark(var(--clr-white), var(--clr-black));
+
+  --fnt-monospace: 'iA Writer Duo', ui-monospace, monospace;
+  --fnt-serif: 'Manrope'; /* TODO: fallback stack */
+
+  font-family: var(--fnt-monospace);
+  background-color: var(--clr-background);
+  color: var(--clr-body);
+}
+
+/* Remove body padding, to use full-bleed layout instead */
+body {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fnt-serif);
+  text-decoration: underline;
+  text-decoration-color: var(--clr-primary);
+  text-decoration-thickness: 2px;
+
+  a:hover {
+    text-underline-offset: calc(0.15em - (3px / 4));
+    text-decoration-thickness: 3px;
+  }
+}
+
+a {
+  color: var(--clr-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+abbr,
+acronym,
+ins {
+  text-underline-offset: 0.15em;
+}
+
+pre,
+code,
+kbd,
+samp {
+  background-color: var(--clr-body);
+  color: var(--clr-background);
+  border-radius: 0.25rem;
+  border: 2px solid var(--clr-primary);
+}
+
+code,
+kbd,
+samp {
+  padding: 0.125rem 0.25rem;
+}
+
+/* Fix width in full-bleed layout */
+hr {
+  inline-size: 100%;
+}
+
+:where(img, figure) + figcaption {
+  margin-block-start: 0.75rem;
+}
+
+::selection {
+  color: var(--clr-white);
+  background-color: light-dark(var(--clr-blue-100), var(--clr-blue-200));
+}

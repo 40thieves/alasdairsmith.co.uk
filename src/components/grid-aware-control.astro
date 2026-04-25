@@ -24,6 +24,10 @@ const gridAwareCarbonIntensityLevel = Astro.locals.gridAwareCarbonIntensityLevel
       --summary-content: '▾';
       background-color: var(--clr-primary);
     }
+
+    a {
+      color: inherit;
+    }
   }
 
   summary {
@@ -51,7 +55,9 @@ const gridAwareCarbonIntensityLevel = Astro.locals.gridAwareCarbonIntensityLevel
     <summary>Grid Aware</summary>
     <div>
       This site is Grid Aware, meaning that it changes its design based on the
-      quantity of fossil fuels on your nearest energy grid.
+      quantity of fossil fuels on your nearest energy grid. <a
+        href="/grid-aware">Learn more.</a
+      >
     </div>
   </details>
 </grid-aware-control>

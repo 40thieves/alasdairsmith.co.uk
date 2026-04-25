@@ -23,7 +23,7 @@ If anything goes wrong or no data is available, grid awareness is disabled and c
 
 ### Differences to the Green Web Foundation's grid-aware website tool
 
-This is slightly different from the grid-aware websites tool, which modifies server responses in an edge worker. The assumption that the underlying content of the page can't be changed doesn't hold here as I chose to rebuild my site from scratch to support grid awareness from the start!
+This is slightly different from the grid-aware websites tool, which modifies server responses in an edge worker. The assumption that the underlying content of the page can't be changed doesn't hold here as I chose to rebuild my site from scratch to support grid awareness.
 
 ## What changes on this site?
 
@@ -35,6 +35,12 @@ When the carbon intensity level is `high`, the following changes are made in com
 4. More ideas to come!
 
 A banner is also displayed at the top of the page, informing the user about what is happening and what the current carbon intensity level is. In future I may implement a way for the user to override the level manually.
+
+## Is making this site grid aware worth it?
+
+Does a grid aware website really save emissions? The only real way to know this is via measurement, which I have not (yet) attempted. Measurement is unfortunately a difficult & much discussed problem in green software. In the future I plan to move hosting to a [verified green host](https://www.thegreenwebfoundation.org/tools/directory/), at which point I may take time to run measurements.
+
+However, in the meantime this was a fun learning experiment. I also want to support Electricity Maps in their development of this new API, so I believe many it has interesting use cases in the future.
 
 ## Open code
 

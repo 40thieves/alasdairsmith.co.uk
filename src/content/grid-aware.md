@@ -14,8 +14,8 @@ Grid awareness is powered by [Astro's on-demand rendering](https://docs.astro.bu
 
 When someone visits this website, the following happens:
 
-1. Server middleware detects the user's IP address and translates this into a (rough!) geolocation
-2. Data is fetched from the [Electricity Maps Carbon Intensity Level API](https://app.electricitymaps.com/developer-hub/api/reference#carbon-intensity-level-latest) about the carbon intensity (roughly how much fossil fuel is being burned) on the user's electricity grid. It returns a "level" of `high`, `moderate` or `low`
+1. Server middleware detects the user's IP address and translates this into a rough geolocation, good enough to determine which country the user is located in
+2. Data is fetched from the [Electricity Maps Carbon Intensity Level API](https://app.electricitymaps.com/developer-hub/api/reference#carbon-intensity-level-latest) about the carbon intensity on the user's electricity grid. Carbon intensity roughly maps to how much fossil fuel is being burned in the country at that time and returns a `high`, `moderate` or `low` level result
 3. When rendering the page, the carbon intensity level is passed to components which can decide how to change their behaviour
 4. The carbon intensity level is stored in a cookie, to reduce load (and therefore carbon emissions!) on the Electricity Maps API
 
@@ -38,9 +38,11 @@ A banner is also displayed at the top of the page, informing the user about what
 
 ## Is making this site grid aware worth it?
 
-Does a grid aware website really save emissions? The only real way to know this is via measurement, which I have not (yet) attempted. Measurement is unfortunately a difficult & much discussed problem in green software. In the future I plan to move hosting to a [verified green host](https://www.thegreenwebfoundation.org/tools/directory/), at which point I may take time to run measurements.
+Does a grid aware website really save emissions? Do those emissions savings stack up to
 
-However, in the meantime this was a fun learning experiment. I also want to support Electricity Maps in their development of this new API, so I believe many it has interesting use cases in the future.
+The only real way to know this is via measurement, which I have not attempted. Measurement is unfortunately a difficult & much discussed problem in green software, although more tools are becoming available and accurate. In the future I plan to move hosting to a [verified green host](https://www.thegreenwebfoundation.org/tools/directory/), at which point I plan to run some measurements.
+
+In the meantime this was a fun learning experiment to put green software techniques into practice. Sharing these techniques and the Electricity Maps API is also important to me, as I believe there are many other interesting use cases.
 
 ## Open code
 

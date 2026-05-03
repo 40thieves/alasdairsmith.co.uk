@@ -1,16 +1,13 @@
 ---
-import { getCollection, render } from 'astro:content'
+import { getEntry, render } from 'astro:content'
 import FullLayout from '../../layouts/full.astro'
 
-export async function getStaticPaths() {
-  const journalEntries = await getCollection('journalEntries')
-  return journalEntries.map((journalEntry) => ({
-    params: { id: journalEntry.id },
-    props: { journalEntry }
-  }))
-}
+const { id } = Astro.params
+if (id === undefined) return Astro.redirect('/404')
 
-const { journalEntry } = Astro.props
+const journalEntry = await getEntry('journalEntries', id)
+if (journalEntry === undefined) return Astro.redirect('/404')
+
 const { Content } = await render(journalEntry)
 ---
 

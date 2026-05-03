@@ -1,0 +1,21 @@
+---
+import { getCollection, getEntry, render } from 'astro:content'
+import FullLayout from '../layouts/full.astro'
+
+const posts = await getCollection('journalEntries')
+---
+
+<FullLayout title="Journal">
+  <article class="flow">
+    <h1>Journal</h1>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`journal/${post.id}`}>{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+</FullLayout>

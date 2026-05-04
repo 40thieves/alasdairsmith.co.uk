@@ -15,8 +15,8 @@ const { Content } = await render(journalEntry)
 <FullLayout title={journalEntry.data.title}>
   <article class="flow">
     <h1>{journalEntry.data.title}</h1>
-    <time datetime={journalEntry.data['published-date'].toISOString()}
-      >{formatDate(journalEntry.data['published-date'])}</time
+    <time datetime={journalEntry.data.publishedDate.toISOString()}
+      >{formatDate(journalEntry.data.publishedDate)}</time
     >
 
     <Content />

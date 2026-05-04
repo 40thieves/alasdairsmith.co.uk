@@ -30,10 +30,16 @@ const journalEntries = defineCollection({
       return options.entry
     }
   }),
-  schema: z.object({
-    title: z.string(),
-    'published-date': z.coerce.date()
-  })
+  schema: z
+    .object({
+      title: z.string(),
+      'published-date': z.coerce.date()
+    })
+    // Rewrite published-date to publishedDate for easier reference in JS
+    .transform((value) => ({
+      title: value.title,
+      publishedDate: value['published-date']
+    }))
 })
 
 export const collections = { journalEntries }

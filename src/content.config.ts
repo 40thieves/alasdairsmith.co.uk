@@ -33,11 +33,12 @@ const journalEntries = defineCollection({
   schema: z
     .object({
       title: z.string(),
-      'published-date': z.coerce.date()
+      'published-date': z.coerce.date(),
+      draft: z.boolean().optional()
     })
     // Rewrite published-date to publishedDate for easier reference in JS
     .transform((value) => ({
-      title: value.title,
+      ...value,
       publishedDate: value['published-date']
     }))
 })

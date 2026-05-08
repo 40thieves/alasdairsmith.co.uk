@@ -9,19 +9,36 @@ const ordinalDateSuffixes: Record<string, string> = {
   other: 'th'
 }
 
-export function formatDate(date: Date): string {
-  return dateFormatter
-    .formatToParts(date)
-    .map((part) => {
-      return part.type === 'day'
-        ? addOrdinalSuffixToDayNum(parseInt(part.value, 10))
-        : part.value
-    })
+/**
+ * Format a Date into a day number, ordinal suffix, month name and year number
+ * string
+ * @example
+ * formatDateDayMonth(new Date("2026-01-01T00:00:00Z")) -> "1st January 2026"
+ * @param date Date to format
+ * @returns Formatted string
+ */
+export function formatDateFull(date: Date): string {
+  return formatDateToParts(date)
+    .map((part) => part.value)
     .join('')
 }
 
+function formatDateToParts(date: Date) {
+  return dateFormatter
+    .formatToParts(date)
+    .reduce<Intl.DateTimeFormatPart[]>((acc, part) => {
+      return part.type === 'day'
+        ? acc.concat([
+            part,
+            // Add a literal part containing the ordinal suffix (st/nd/rd/th)
+            ordinalSuffixPartFromDayNum(parseInt(part.value, 10))
+          ])
+        : acc.concat([part])
+    }, [])
+}
+
 // Adapted from https://tinycode2.medium.com/js-and-ecmascript-date-formatting-with-ordinal-indicators-a271a23a866c
-function addOrdinalSuffixToDayNum(dayNum: number) {
+function ordinalSuffixPartFromDayNum(dayNum: number): Intl.DateTimeFormatPart {
   invariant(
     Number.isFinite(dayNum) && dayNum >= 1,
     'Expected finite, positive number'
@@ -32,5 +49,8 @@ function addOrdinalSuffixToDayNum(dayNum: number) {
   invariant(ordinal in ordinalDateSuffixes, 'Ordinal not in possible suffixes')
   const suffix = ordinalDateSuffixes[ordinal]
 
-  return `${dayNum}${suffix}`
+  return {
+    type: 'literal',
+    value: suffix
+  }
 }

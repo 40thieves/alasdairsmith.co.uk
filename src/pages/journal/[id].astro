@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content'
 import FullLayout from '../../layouts/full.astro'
-import { formatDate } from '../../utils'
+import { formatDateFull } from '../../utils'
 
 const { id } = Astro.params
 if (id === undefined) return Astro.redirect('/404')
@@ -16,7 +16,7 @@ const { Content } = await render(journalEntry)
   <article class="flow">
     <h1>{journalEntry.data.title}</h1>
     <time datetime={journalEntry.data.publishedDate.toISOString()}
-      >{formatDate(journalEntry.data.publishedDate)}</time
+      >{formatDateFull(journalEntry.data.publishedDate)}</time
     >
 
     <Content />

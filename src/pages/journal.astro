@@ -1,21 +1,65 @@
 ---
-import { getCollection, getEntry, render } from 'astro:content'
+import { getCollection, type CollectionEntry } from 'astro:content'
 import FullLayout from '../layouts/full.astro'
+import { formatDateDayMonth } from '../utils'
 
-const posts = await getCollection('journalEntries')
+const rawPosts = await getCollection('journalEntries')
+const posts = rawPosts
+  .filter((post) => post.data.draft !== true)
+  .toSorted(
+    (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+  )
+
+const grouped = Array.from(
+  posts.reduce<Map<number, CollectionEntry<'journalEntries'>[]>>(
+    (acc, post) => {
+      const year = post.data.publishedDate.getFullYear()
+      acc.set(year, (acc.get(year) ?? []).concat(post))
+      return acc
+    },
+    new Map()
+  )
+)
 ---
+
+<style>
+  .entryitem {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .entryitem__row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+
+    time {
+      justify-self: end;
+    }
+  }
+</style>
 
 <FullLayout title="Journal">
   <article class="flow">
     <h1>Journal</h1>
-    <ul>
-      {
-        posts.map((post) => (
-          <li>
-            <a href={`journal/${post.id}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+    {
+      grouped.map(([year, posts]) => (
+        <section class="flow" aria-labelledby={`journal-year-${year}`}>
+          <h2 id={`journal-year-${year}`}>{year}</h2>
+          <div class="entryitem">
+            {posts.map((post) => (
+              <div class="entryitem__row">
+                <span>
+                  <a href={`journal/${post.id}`}>{post.data.title}</a>
+                </span>
+                <time datetime={post.data.publishedDate.toISOString()}>
+                  {formatDateDayMonth(post.data.publishedDate)}
+                </time>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))
+    }
   </article>
 </FullLayout>

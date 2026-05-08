@@ -23,6 +23,20 @@ export function formatDateFull(date: Date): string {
     .join('')
 }
 
+/**
+ * Format a Date into a day number, ordinal suffix and month name string
+ * @example
+ * formatDateDayMonth(new Date("2026-01-01T00:00:00Z")) -> "1st January"
+ * @param date Date to format
+ * @returns Formatted string
+ */
+export function formatDateDayMonth(date: Date): string {
+  return formatDateToParts(date).reduce<string>(
+    (acc, part) => (part.type !== 'year' ? acc + part.value : acc),
+    ''
+  )
+}
+
 function formatDateToParts(date: Date) {
   return dateFormatter
     .formatToParts(date)

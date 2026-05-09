@@ -1,7 +1,7 @@
 ---
-title: Hello World
-published-date: 2026-01-01
-excerpt: This is an excerpt of a test post
+title: Hello World 2
+published-date: 2026-01-02
+excerpt: This is an excerpt of another test post
 ---
 
 Hello world! This is a test post.

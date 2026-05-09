@@ -25,29 +25,35 @@ const grouped = Array.from(
 <style>
   .entryitem {
     display: grid;
-    gap: 0.5rem;
+    gap: 0.25rem;
   }
 
   .entryitem__row {
     display: grid;
     grid-template-columns: 1fr auto;
+    align-items: baseline;
     gap: 1rem;
 
     time {
       justify-self: end;
+      font-size: 0.8rem;
     }
+  }
+
+  .entryitem__excerpt {
+    margin-block: 0;
   }
 </style>
 
 <FullLayout title="Journal">
-  <article class="flow">
+  <div class="flow">
     <h1>Journal</h1>
     {
       grouped.map(([year, posts]) => (
         <section class="flow" aria-labelledby={`journal-year-${year}`}>
           <h2 id={`journal-year-${year}`}>{year}</h2>
-          <div class="entryitem">
-            {posts.map((post) => (
+          {posts.map((post) => (
+            <article class="entryitem">
               <div class="entryitem__row">
                 <span>
                   <a href={`journal/${post.id}`}>{post.data.title}</a>
@@ -56,10 +62,15 @@ const grouped = Array.from(
                   {formatDateDayMonth(post.data.publishedDate)}
                 </time>
               </div>
-            ))}
-          </div>
+              {post.data.excerpt && (
+                <p class="entryitem__excerpt">
+                  <em>{post.data.excerpt}</em>
+                </p>
+              )}
+            </article>
+          ))}
         </section>
       ))
     }
-  </article>
+  </div>
 </FullLayout>

@@ -34,7 +34,8 @@ const journalEntries = defineCollection({
     .object({
       title: z.string(),
       'published-date': z.coerce.date(),
-      draft: z.boolean().optional()
+      draft: z.boolean().optional(),
+      excerpt: z.string().optional()
     })
     // Rewrite published-date to publishedDate for easier reference in JS
     .transform((value) => ({

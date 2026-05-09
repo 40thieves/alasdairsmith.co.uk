@@ -13,7 +13,7 @@ const { Content } = await render(journalEntry)
 ---
 
 <style>
-  .dt-published {
+  .post-meta {
     font-size: 0.9em;
   }
 </style>
@@ -21,14 +21,14 @@ const { Content } = await render(journalEntry)
 <FullLayout title={journalEntry.data.title}>
   <article class="flow h-entry">
     <h1 class="p-name">{journalEntry.data.title}</h1>
-    <span>
+    <div class="post-meta">
       Posted on
       <time
         datetime={journalEntry.data.publishedDate.toISOString()}
         class="dt-published"
         >{formatDateFull(journalEntry.data.publishedDate)}</time
       >
-    </span>
+    </div>
 
     <div class="e-content">
       <Content />

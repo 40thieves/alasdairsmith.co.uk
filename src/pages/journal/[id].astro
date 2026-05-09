@@ -12,13 +12,26 @@ if (journalEntry === undefined) return Astro.redirect('/404')
 const { Content } = await render(journalEntry)
 ---
 
-<FullLayout title={journalEntry.data.title}>
-  <article class="flow">
-    <h1>{journalEntry.data.title}</h1>
-    <time datetime={journalEntry.data.publishedDate.toISOString()}
-      >{formatDateFull(journalEntry.data.publishedDate)}</time
-    >
+<style>
+  .dt-published {
+    font-size: 0.9em;
+  }
+</style>
 
-    <Content />
+<FullLayout title={journalEntry.data.title}>
+  <article class="flow h-entry">
+    <h1 class="p-name">{journalEntry.data.title}</h1>
+    <span>
+      Posted on
+      <time
+        datetime={journalEntry.data.publishedDate.toISOString()}
+        class="dt-published"
+        >{formatDateFull(journalEntry.data.publishedDate)}</time
+      >
+    </span>
+
+    <div class="e-content">
+      <Content />
+    </div>
   </article>
 </FullLayout>

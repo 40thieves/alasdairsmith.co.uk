@@ -5,15 +5,24 @@ import { formatDateDayMonth } from '../utils'
 
 const rawPosts = await getCollection('journalEntries')
 const posts = rawPosts
-  .filter((post) => post.data.draft !== true)
+  .filter((post) =>
+    // When in dev mode, include all posts (including drafts), otherwise filter
+    // drafts.
+    import.meta.env.DEV ? true : post.data.draft !== true
+  )
   .toSorted(
-    (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+    (a, b) =>
+      !a.data.draft && !b.data.draft
+        ? b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+        : -1 // Sort drafts to the top
   )
 
 const grouped = Array.from(
-  posts.reduce<Map<number, CollectionEntry<'journalEntries'>[]>>(
+  posts.reduce<Map<string, CollectionEntry<'journalEntries'>[]>>(
     (acc, post) => {
-      const year = post.data.publishedDate.getFullYear()
+      const year = post.data.draft
+        ? 'Draft'
+        : String(post.data.publishedDate.getFullYear())
       acc.set(year, (acc.get(year) ?? []).concat(post))
       return acc
     },
@@ -61,12 +70,14 @@ const grouped = Array.from(
                     {post.data.title}
                   </a>
                 </span>
-                <time
-                  datetime={post.data.publishedDate.toISOString()}
-                  class="dt-published"
-                >
-                  {formatDateDayMonth(post.data.publishedDate)}
-                </time>
+                {post.data.publishedDate && (
+                  <time
+                    datetime={post.data.publishedDate.toISOString()}
+                    class="dt-published"
+                  >
+                    {formatDateDayMonth(post.data.publishedDate)}
+                  </time>
+                )}
               </div>
               {post.data.excerpt && (
                 <p class="p-summary">

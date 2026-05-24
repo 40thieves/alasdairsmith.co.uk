@@ -22,12 +22,21 @@ const { Content } = await render(journalEntry)
   <article class="flow h-entry">
     <h1 class="p-name">{journalEntry.data.title}</h1>
     <div class="post-meta">
-      Posted on
-      <time
-        datetime={journalEntry.data.publishedDate.toISOString()}
-        class="dt-published"
-        >{formatDateFull(journalEntry.data.publishedDate)}</time
-      >
+      {
+        journalEntry.data.publishedDate ? (
+          <>
+            Posted on
+            <time
+              datetime={journalEntry.data.publishedDate.toISOString()}
+              class="dt-published"
+            >
+              {formatDateFull(journalEntry.data.publishedDate)}
+            </time>
+          </>
+        ) : (
+          'In Draft'
+        )
+      }
     </div>
 
     <div class="e-content">

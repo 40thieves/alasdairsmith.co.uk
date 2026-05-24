@@ -1,6 +1,6 @@
 ---
 title: Pocketcasts/BeardedSpice fix 💚
-published-date: 2018-08-24
+publishedDate: 2018-08-24
 ---
 
 So I like to listen to podcasts while at work. Nope, I don't find it distracting if it's specific podcasts. I like the background noise.

@@ -1,6 +1,6 @@
 ---
 title: Thoughts About Open Source Science Research
-published-date: 2011-02-14
+publishedDate: 2011-02-14
 ---
 
 ![](./21572472-blog-image--with-layers-.jpg)

@@ -1,6 +1,6 @@
 ---
 title: Government Sponsored Identity Apis
-published-date: 2012-02-02
+publishedDate: 2012-02-02
 ---
 
 ![gov.uk homepage](./37455492-govuk.png)

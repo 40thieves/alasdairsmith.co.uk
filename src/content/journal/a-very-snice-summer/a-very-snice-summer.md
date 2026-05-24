@@ -1,6 +1,6 @@
 ---
 title: A Very SnICE Summer
-published-date: 2011-09-15
+publishedDate: 2011-09-15
 ---
 
 _Cross posted from my [Kandersteg blog](http://kandersteg.posterous.com). For all of my photos, check it out. Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued. I may try to revive it sometime, when I'm finished tidying up this site._

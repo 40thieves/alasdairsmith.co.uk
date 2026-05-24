@@ -1,6 +1,6 @@
 ---
 title: Exciting News
-published-date: 2012-06-23
+publishedDate: 2012-06-23
 ---
 
 _I haven't blogged in a while, which seems to be the way I start every post here..._

@@ -1,6 +1,6 @@
 ---
 title: Goodwood 2014
-published-date: 2014-06-30
+publishedDate: 2014-06-30
 ---
 
 Me and my dad have been watching F1 for about as long as I can remember. We've been to Goodwood's Festival of Speed event a couple of times before, and it's a great chance to get right up to the cars. It's pretty damn rare these days in F1.

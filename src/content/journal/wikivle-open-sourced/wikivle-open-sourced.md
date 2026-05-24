@@ -1,6 +1,6 @@
 ---
 title: WikiVLE open sourced!
-published-date: 2012-06-23
+publishedDate: 2012-06-23
 ---
 
 WikiVLE is a Virtual Learning Environment that I built for my Web Client &amp; Server coursework in Winter/Spring 2012

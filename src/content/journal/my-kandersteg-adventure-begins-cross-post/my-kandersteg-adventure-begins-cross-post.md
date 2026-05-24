@@ -1,6 +1,6 @@
 ---
 title: My Kandersteg Adventure Begins [cross post]
-published-date: 2010-05-23
+publishedDate: 2010-05-23
 ---
 
 Cross-posted from [kandersteg.posterous.com](http://kandersteg.posterous.com/) where I'll be blogging about my summer in Switzerland from now on:

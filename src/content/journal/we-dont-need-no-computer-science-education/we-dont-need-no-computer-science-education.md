@@ -1,6 +1,6 @@
 ---
 title: We Don't Need No (Computer Science) Education
-published-date: 2012-01-17
+publishedDate: 2012-01-17
 ---
 
 ![](./4665389330_d09f3d6b75_b.jpg)

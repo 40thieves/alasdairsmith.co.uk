@@ -1,6 +1,6 @@
 ---
 title: Fixing Apache On Yosemite
-published-date: 2014-10-19
+publishedDate: 2014-10-19
 ---
 
 So it's that time of year: upgrading OSX and fixing all the Apache brokenness that inevitably follows. These are just some quick notes on how to fix it. ProTip™: remember to restart Apache after making a change to the config!

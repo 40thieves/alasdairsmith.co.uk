@@ -1,6 +1,6 @@
 ---
 title: Placement
-published-date: 2011-03-05
+publishedDate: 2011-03-05
 ---
 
 _Ed's note: I got hired! See my [update post](http://40thiev.es/exciting-news)._

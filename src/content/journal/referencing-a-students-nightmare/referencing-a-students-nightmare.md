@@ -1,6 +1,6 @@
 ---
 title: "Referencing: A Student's nightmare"
-published-date: 2010-10-27
+publishedDate: 2010-10-27
 ---
 
 ![](./16706566-IMG_0819.jpg)

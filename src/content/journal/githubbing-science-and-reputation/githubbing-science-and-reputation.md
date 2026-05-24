@@ -1,6 +1,6 @@
 ---
 title: Githubbing Science And Reputation
-published-date: 2011-04-10
+publishedDate: 2011-04-10
 ---
 
 ![XKCD comic](./24423520-xkcd.png)

@@ -1,6 +1,6 @@
 ---
 title: Back To The 'Steg
-published-date: 2011-06-02
+publishedDate: 2011-06-02
 ---
 
 _Cross-posted from my [Kandersteg blog](http://kandersteg.posterous.com). Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued. I may try to revive it sometime, when I'm finished tidying up this site._

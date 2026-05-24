@@ -1,6 +1,6 @@
 ---
 title: 3 Months Of Awesome [cross post]
-published-date: 2010-09-27
+publishedDate: 2010-09-27
 ---
 
 _Cross-posted from [kandersteg.posterous.com](http://kandersteg.posterous.com)_

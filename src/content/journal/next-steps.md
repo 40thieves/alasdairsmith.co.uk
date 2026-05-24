@@ -1,6 +1,6 @@
 ---
 title: Next Steps
-published-date: 2016-01-31
+publishedDate: 2016-01-31
 ---
 
 TL;DR: I'm joining [Overleaf](https://www.overleaf.com/). I'm sticking around in Portsmouth for a bit, but moving to London soonish™. Huge thanks to [Radweb](https://radweb.co.uk/) for the awesome 2 years there.

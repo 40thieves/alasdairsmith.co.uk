@@ -1,6 +1,6 @@
 ---
 title: Safari SVG/jQuery bug workaround
-published-date: 2015-03-03
+publishedDate: 2015-03-03
 ---
 
 Recently at work we've switched over to using a SVG icon set on our Backbone project. This caused a strange bug where clicking directly on the icon in Safari with a jQuery event handler attached would throw a Javascript error:

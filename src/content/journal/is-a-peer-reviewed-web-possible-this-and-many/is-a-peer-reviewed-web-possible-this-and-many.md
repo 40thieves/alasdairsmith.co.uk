@@ -1,6 +1,6 @@
 ---
 title: Is a 'peer reviewed web' possible? This and many more questions about Hypothes.is
-published-date: 2011-10-25
+publishedDate: 2011-10-25
 ---
 
 ![](./33418558-hypothesis_logo.png)

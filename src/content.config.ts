@@ -1,6 +1,26 @@
 import { glob } from 'astro/loaders'
 import { z } from 'astro/zod'
-import { defineCollection } from 'astro:content'
+import { defineCollection, type CollectionEntry } from 'astro:content'
+
+// Schema for draft posts
+const DraftJournalEntrySchema = z.object({
+  draft: z.literal(true),
+  title: z.string(),
+  publishedDate: z.coerce.date().optional(),
+  excerpt: z.string().optional()
+})
+// Schema for published posts
+const PublishedJournalEntrySchema = z.object({
+  draft: z.literal(false).optional(),
+  title: z.string(),
+  publishedDate: z.coerce.date(),
+  excerpt: z.string().optional()
+})
+// Discriminated union of published and draft posts
+const JournalEntrySchema = z.discriminatedUnion('draft', [
+  PublishedJournalEntrySchema,
+  DraftJournalEntrySchema
+])
 
 const journalEntries = defineCollection({
   // Folder structure: either md files in root or nested inside named folders
@@ -30,18 +50,7 @@ const journalEntries = defineCollection({
       return options.entry
     }
   }),
-  schema: z
-    .object({
-      title: z.string(),
-      'published-date': z.coerce.date(),
-      draft: z.boolean().optional(),
-      excerpt: z.string().optional()
-    })
-    // Rewrite published-date to publishedDate for easier reference in JS
-    .transform((value) => ({
-      ...value,
-      publishedDate: value['published-date']
-    }))
+  schema: JournalEntrySchema
 })
 
 export const collections = { journalEntries }

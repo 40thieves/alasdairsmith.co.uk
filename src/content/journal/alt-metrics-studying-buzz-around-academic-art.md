@@ -1,6 +1,6 @@
 ---
 title: 'Alt-metrics: Studying buzz around academic articles'
-published-date: 2010-11-30
+publishedDate: 2010-11-30
 ---
 
 I had a [good old moan](http://40thiev.es/referencing-a-students-nightmare) about citations a couple of weeks back, about how I found all citation software completely useless. Today I found a really interesting article on a new type of citation.

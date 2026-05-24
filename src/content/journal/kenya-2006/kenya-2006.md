@@ -1,6 +1,6 @@
 ---
 title: Kenya 2006
-published-date: 2011-02-12
+publishedDate: 2011-02-12
 ---
 
 I was cleaning out some photos on my computer today, and I stumbled across some of my photos from my trip to Kenya way back in 2006. I went with World Challenge, an organisation that takes groups of kids (17-18 year olds) to awesome places around the world. I spend a month out there, doing a bit of the tourist stuff like the safaris and seeing a few of the 'Big Five'. We also had a 'challenge week' where we climbed Mt. Kenya, and a week working in an orphanage.

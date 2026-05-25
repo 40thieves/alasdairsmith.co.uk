@@ -1,21 +1,9 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content'
+import { type CollectionEntry } from 'astro:content'
 import FullLayout from '../layouts/full.astro'
-import { formatDateDayMonth } from '../utils'
+import { formatDateDayMonth, getJournalEntries } from '../utils'
 
-const rawPosts = await getCollection('journalEntries')
-const posts = rawPosts
-  .filter((post) =>
-    // When in dev mode, include all posts (including drafts), otherwise filter
-    // drafts.
-    import.meta.env.DEV ? true : post.data.draft !== true
-  )
-  .toSorted(
-    (a, b) =>
-      !a.data.draft && !b.data.draft
-        ? b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
-        : -1 // Sort drafts to the top
-  )
+const posts = await getJournalEntries({ includeDrafts: import.meta.env.DEV })
 
 const grouped = Array.from(
   posts.reduce<Map<string, CollectionEntry<'journalEntries'>[]>>(

@@ -1,3 +1,4 @@
+import { getCollection } from 'astro:content'
 import invariant from 'tiny-invariant'
 
 const dateFormatter = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long' })
@@ -67,4 +68,28 @@ function ordinalSuffixPartFromDayNum(dayNum: number): Intl.DateTimeFormatPart {
     type: 'literal',
     value: suffix
   }
+}
+
+/**
+ * Gets a list of published journal entries (blog posts) as Astro content
+ * collection objects, filtered to only those that are marked as published and
+ * sorted by the publish date in reverse chronological order.
+ *
+ * @returns List of published journal entries as Astro collection objects, sorted by publish date
+ */
+export async function getJournalEntries({
+  includeDrafts = false
+}: {
+  includeDrafts?: boolean
+}) {
+  const rawPosts = await getCollection('journalEntries')
+
+  return rawPosts
+    .filter((post) => (includeDrafts ? true : post.data.draft !== true))
+    .toSorted(
+      (a, b) =>
+        !a.data.draft && !b.data.draft
+          ? b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+          : -1 // Sort drafts to the top
+    )
 }

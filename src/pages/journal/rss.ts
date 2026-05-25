@@ -9,7 +9,7 @@ export const GET: APIRoute = async (context) => {
   return rss({
     title: 'Alasdair Smith | Journal',
     description:
-      'Alasdair Smith is a frontend-focused engineer and leader based in London',
+      'Alasdair Smith is a frontend-focused engineer and leader based in London.',
     // URL in prod
     site: context.site!,
     items: journalEntries.map((post) => ({
@@ -21,6 +21,7 @@ export const GET: APIRoute = async (context) => {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img'])
       })
     })),
-    customData: `<language>en-GB</language>`
+    customData: `<language>en-GB</language>`,
+    stylesheet: '/rss/styles.xsl'
   })
 }

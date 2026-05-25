@@ -77,15 +77,11 @@ function ordinalSuffixPartFromDayNum(dayNum: number): Intl.DateTimeFormatPart {
  *
  * @returns List of published journal entries as Astro collection objects, sorted by publish date
  */
-export async function getJournalEntries({
-  includeDrafts = false
-}: {
-  includeDrafts?: boolean
-}) {
+export async function getJournalEntries(config?: { includeDrafts?: boolean }) {
   const rawPosts = await getCollection('journalEntries')
 
   return rawPosts
-    .filter((post) => (includeDrafts ? true : post.data.draft !== true))
+    .filter((post) => (config?.includeDrafts ? true : post.data.draft !== true))
     .toSorted(
       (a, b) =>
         !a.data.draft && !b.data.draft

@@ -2,14 +2,14 @@ import rss from '@astrojs/rss'
 import type { APIRoute } from 'astro'
 import sanitizeHtml from 'sanitize-html'
 import { getJournalEntries } from '../../utils'
+import { siteDescription } from '../../meta'
 
 export const GET: APIRoute = async (context) => {
   const journalEntries = await getJournalEntries()
 
   return rss({
     title: 'Alasdair Smith | Journal',
-    description:
-      'Alasdair Smith is a frontend-focused engineer and leader based in London.',
+    description: siteDescription,
     // URL in prod
     site: context.site!,
     items: journalEntries.map((post) => ({

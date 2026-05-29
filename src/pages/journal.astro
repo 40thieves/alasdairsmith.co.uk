@@ -1,0 +1,81 @@
+---
+import { type CollectionEntry } from 'astro:content'
+import FullLayout from '../layouts/full.astro'
+import { formatDateDayMonth, getJournalEntries } from '../utils'
+
+const posts = await getJournalEntries({ includeDrafts: import.meta.env.DEV })
+
+const grouped = Array.from(
+  posts.reduce<Map<string, CollectionEntry<'journalEntries'>[]>>(
+    (acc, post) => {
+      const year = post.data.draft
+        ? 'Draft'
+        : String(post.data.publishedDate.getFullYear())
+      acc.set(year, (acc.get(year) ?? []).concat(post))
+      return acc
+    },
+    new Map()
+  )
+)
+---
+
+<style>
+  .h-entry {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .h-entry__row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 1rem;
+
+    .dt-published {
+      justify-self: end;
+      font-size: 0.9em;
+    }
+  }
+
+  .p-summary {
+    margin-block: 0;
+    font-size: 0.9em;
+  }
+</style>
+
+<FullLayout title="Journal">
+  <div class="flow h-feed">
+    <h1 class="p-name">Journal</h1>
+    {
+      grouped.map(([year, posts]) => (
+        <section class="flow" aria-labelledby={`journal-year-${year}`}>
+          <h2 id={`journal-year-${year}`}>{year}</h2>
+          {posts.map((post) => (
+            <article class="h-entry">
+              <div class="h-entry__row">
+                <span>
+                  <a href={`journal/${post.id}`} class="p-name u-url">
+                    {post.data.title}
+                  </a>
+                </span>
+                {post.data.publishedDate && (
+                  <time
+                    datetime={post.data.publishedDate.toISOString()}
+                    class="dt-published"
+                  >
+                    {formatDateDayMonth(post.data.publishedDate)}
+                  </time>
+                )}
+              </div>
+              {post.data.excerpt && (
+                <p class="p-summary">
+                  <em>{post.data.excerpt}</em>
+                </p>
+              )}
+            </article>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+</FullLayout>

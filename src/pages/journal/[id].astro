@@ -1,22 +1,46 @@
 ---
-import { getCollection, render } from 'astro:content'
+import { getEntry, render } from 'astro:content'
 import FullLayout from '../../layouts/full.astro'
+import { formatDateFull } from '../../utils'
 
-export async function getStaticPaths() {
-  const journalEntries = await getCollection('journalEntries')
-  return journalEntries.map((journalEntry) => ({
-    params: { id: journalEntry.id },
-    props: { journalEntry }
-  }))
-}
+const { id } = Astro.params
+if (id === undefined) return Astro.redirect('/404')
 
-const { journalEntry } = Astro.props
+const journalEntry = await getEntry('journalEntries', id)
+if (journalEntry === undefined) return Astro.redirect('/404')
+
 const { Content } = await render(journalEntry)
 ---
 
+<style>
+  .post-meta {
+    font-size: 0.9em;
+  }
+</style>
+
 <FullLayout title={journalEntry.data.title}>
-  <article class="flow">
-    <h1>{journalEntry.data.title}</h1>
-    <Content />
+  <article class="flow h-entry">
+    <h1 class="p-name">{journalEntry.data.title}</h1>
+    <div class="post-meta">
+      {
+        journalEntry.data.publishedDate ? (
+          <>
+            Posted on
+            <time
+              datetime={journalEntry.data.publishedDate.toISOString()}
+              class="dt-published"
+            >
+              {formatDateFull(journalEntry.data.publishedDate)}
+            </time>
+          </>
+        ) : (
+          'In Draft'
+        )
+      }
+    </div>
+
+    <div class="e-content">
+      <Content />
+    </div>
   </article>
 </FullLayout>

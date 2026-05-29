@@ -1,9 +1,10 @@
 ---
 title: Back To The 'Steg
 publishedDate: 2011-06-02
+excerpt: Heading back to KISC as a Snow & Ice (SNICE) Guide teaching glacier techniques like crampon use, ice axe self-arrest, and crevasse rescue. Plus more some photos from last year.
 ---
 
-_Cross-posted from my [Kandersteg blog](http://kandersteg.posterous.com). Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued. I may try to revive it sometime, when I'm finished tidying up this site._
+_Cross-posted from my [Kandersteg blog](http://kandersteg.posterous.com). Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued._
 
 I'm super excited to say that in just under a week, I'll be back at [KISC](http://www.kisc.ch) :)
 

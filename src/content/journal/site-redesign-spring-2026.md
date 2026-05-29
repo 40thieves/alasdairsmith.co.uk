@@ -1,6 +1,7 @@
 ---
 title: Site Redesign Spring 2026
 draft: true
+excerpt: A look my major site redesign and the tech behind it.
 ---
 
 After about 7 years, I've finally found the time and motivation to update this site to a new design and add some new functionality.

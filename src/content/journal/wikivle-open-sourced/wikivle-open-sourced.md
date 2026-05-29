@@ -1,6 +1,7 @@
 ---
 title: WikiVLE open sourced!
 publishedDate: 2012-06-23
+excerpt: My tool WikiVLE, a tool for sharing educational content in a wiki, is now open sourced.
 ---
 
 WikiVLE is a Virtual Learning Environment that I built for my Web Client &amp; Server coursework in Winter/Spring 2012

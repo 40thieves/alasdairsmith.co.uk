@@ -1,9 +1,10 @@
 ---
 title: Placement
 publishedDate: 2011-03-05
+excerpt: Hire me for a placement year!
 ---
 
-_Ed's note: I got hired! See my [update post](http://40thiev.es/exciting-news)._
+_Ed's note: I got hired! See my [update post](./exciting-news)._
 
 This post is intended as unashamed self promotion for my placement year in the computing industry. Hopefully it'll answer some questions about what a placement year entails and what you might get from it.
 

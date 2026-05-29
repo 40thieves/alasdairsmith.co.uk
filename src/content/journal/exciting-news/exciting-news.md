@@ -1,6 +1,7 @@
 ---
 title: Exciting News
 publishedDate: 2012-06-23
+excerpt: Announcing my new job at Radweb.
 ---
 
 _I haven't blogged in a while, which seems to be the way I start every post here..._

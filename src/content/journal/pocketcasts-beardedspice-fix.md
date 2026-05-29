@@ -1,12 +1,12 @@
 ---
-title: Pocketcasts/BeardedSpice fix 💚
+title: Pocketcasts/BeardedSpice fix
 publishedDate: 2018-08-24
+excerpt: Fixing an issue with media keys not working with PocketCasts.
 ---
 
 So I like to listen to podcasts while at work. Nope, I don't find it distracting if it's specific podcasts. I like the background noise.
 
-BeardedSpice is awesome for wiring up your Mac play/pause controls to things other than iTunes. Like the
-Pocketcasts web app. Unfortunately it broke recently, but here's the steps to fix.
+BeardedSpice is awesome for wiring up your Mac play/pause controls to things other than iTunes. Like the Pocketcasts web app. Unfortunately it broke recently, but here's the steps to fix.
 
 Extra bonus: it now works in the Pocketcasts Beta 🎉
 

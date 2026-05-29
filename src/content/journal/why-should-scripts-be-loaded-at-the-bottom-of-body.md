@@ -1,6 +1,7 @@
 ---
 title: Why should <script>s be loaded at the bottom of <body>?
 publishedDate: 2019-12-28
+excerpt: How to avoid script blocking by re-arranging our HTML.
 ---
 
 I originally wrote this at [work](https://www.overleaf.com/) to explain the reasoning behind one of my pull requests. I decided not to add it to our internal documentation since it's not very specific to Overleaf, but thought it might be useful to share.

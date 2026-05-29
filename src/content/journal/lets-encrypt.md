@@ -1,6 +1,7 @@
 ---
 title: Lets Encrypt
 publishedDate: 2016-06-12
+excerpt: Some notes on setting up Let's Encrypt SSL certificates on my sites.
 ---
 
 I wasn't really planning anything, but I noticed that my about was a bit out of date and I've been wanting to get [Let's Encrypt](https://letsencrypt.org/) installed for a while. These are some notes (mostly for my benefit) on what I did and the workarounds

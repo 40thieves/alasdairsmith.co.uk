@@ -1,9 +1,10 @@
 ---
 title: A Very SnICE Summer
 publishedDate: 2011-09-15
+excerpt: My summer working as a Snow & Ice Guide back at KISC, teaching skills like crevasse rescue and ice climbing was challenging.
 ---
 
-_Cross posted from my [Kandersteg blog](http://kandersteg.posterous.com). For all of my photos, check it out. Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued. I may try to revive it sometime, when I'm finished tidying up this site._
+_Cross-posted from my [Kandersteg blog](http://kandersteg.posterous.com). Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued._
 
 So that's it for another summer, I'm back at home getting bored and wishing I was still in Kandersteg. I loved every moment of it, from working on the glacier to meeting a whole bunch of new friends. I've picked out some of my favourite photos from the whole season
 

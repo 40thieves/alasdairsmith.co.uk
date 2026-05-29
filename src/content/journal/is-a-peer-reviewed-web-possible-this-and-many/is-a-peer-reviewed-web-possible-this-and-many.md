@@ -1,6 +1,7 @@
 ---
 title: Is a 'peer reviewed web' possible? This and many more questions about Hypothes.is
 publishedDate: 2011-10-25
+excerpt: Thinking out loud about the potential of Hypothes.is and whether it can live up to it.
 ---
 
 ![](./33418558-hypothesis_logo.png)

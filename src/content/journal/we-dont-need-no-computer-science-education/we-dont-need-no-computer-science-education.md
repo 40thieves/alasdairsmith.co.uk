@@ -1,6 +1,7 @@
 ---
 title: We Don't Need No (Computer Science) Education
 publishedDate: 2012-01-17
+excerpt: Exploring the question of whether formal computer science education is really necessary?
 ---
 
 ![](./4665389330_d09f3d6b75_b.jpg)

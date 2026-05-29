@@ -1,6 +1,7 @@
 ---
 title: Githubbing Science And Reputation
 publishedDate: 2011-04-10
+excerpt: Some thoughts about how adopting a GitHub-like model for scientific research.
 ---
 
 ![XKCD comic](./24423520-xkcd.png)

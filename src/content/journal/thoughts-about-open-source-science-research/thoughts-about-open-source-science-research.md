@@ -1,6 +1,7 @@
 ---
 title: Thoughts About Open Source Science Research
 publishedDate: 2011-02-14
+excerpt: How open source software development principles apply to scientific research?
 ---
 
 ![](./21572472-blog-image--with-layers-.jpg)

@@ -1,6 +1,7 @@
 ---
-title: Government Sponsored Identity Apis
+title: Government Sponsored Identity APIs
 publishedDate: 2012-02-02
+excerpt: The UK government's new identity APIs raise some interesting questions about privacy.
 ---
 
 ![gov.uk homepage](./37455492-govuk.png)

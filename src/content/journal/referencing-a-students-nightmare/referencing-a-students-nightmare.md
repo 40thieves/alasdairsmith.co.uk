@@ -1,6 +1,7 @@
 ---
 title: "Referencing: A Student's nightmare"
 publishedDate: 2010-10-27
+excerpt: Frustrations with citation software and some alternative approaches I might try instead.
 ---
 
 ![](./16706566-IMG_0819.jpg)

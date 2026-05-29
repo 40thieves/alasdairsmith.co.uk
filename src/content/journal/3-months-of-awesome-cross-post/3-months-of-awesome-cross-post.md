@@ -1,9 +1,10 @@
 ---
 title: 3 Months Of Awesome [cross post]
 publishedDate: 2010-09-27
+excerpt: Photos and memories from my time volunteering at Kandersteg International Scout Centre in summer 2010.
 ---
 
-_Cross-posted from [kandersteg.posterous.com](http://kandersteg.posterous.com)_
+_Cross-posted from my [Kandersteg blog](http://kandersteg.posterous.com). Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued._
 
 Here's the last couple photos that I've got from the summer.
 

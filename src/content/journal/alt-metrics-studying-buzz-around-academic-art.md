@@ -1,6 +1,7 @@
 ---
 title: 'Alt-metrics: Studying buzz around academic articles'
 publishedDate: 2010-11-30
+excerpt: Learning about alt-metrics, an interesting new way to measure impact of scholarly articles on the social web.
 ---
 
 I had a [good old moan](http://40thiev.es/referencing-a-students-nightmare) about citations a couple of weeks back, about how I found all citation software completely useless. Today I found a really interesting article on a new type of citation.

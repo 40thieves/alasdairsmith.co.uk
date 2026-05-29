@@ -1,6 +1,7 @@
 ---
 title: Goodwood 2014
 publishedDate: 2014-06-30
+excerpt: Photos from the Goodwood Festival of Speed, with a mix of classic and modern F1 cars.
 ---
 
 Me and my dad have been watching F1 for about as long as I can remember. We've been to Goodwood's Festival of Speed event a couple of times before, and it's a great chance to get right up to the cars. It's pretty damn rare these days in F1.

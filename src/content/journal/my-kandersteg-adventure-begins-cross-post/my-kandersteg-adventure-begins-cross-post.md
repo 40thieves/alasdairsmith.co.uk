@@ -1,9 +1,10 @@
 ---
 title: My Kandersteg Adventure Begins [cross post]
 publishedDate: 2010-05-23
+excerpt: An intro to my upcoming adventure as a volunteer staff at Kandersteg International Scout Centre.
 ---
 
-Cross-posted from [kandersteg.posterous.com](http://kandersteg.posterous.com/) where I'll be blogging about my summer in Switzerland from now on:
+_Cross-posted from my [Kandersteg blog](http://kandersteg.posterous.com). Ed.'s note: Posterous shut down on 30th April 2013, so this blog was discontinued._
 
 > So I thought I'd write up where I'm going this summer (only taken me a week):
 

@@ -1,6 +1,6 @@
 ---
 title: Site Redesign Spring 2026
-draft: true
+publishedDate: 2026-05-31
 excerpt: A look my major site redesign and the tech behind it.
 ---
 
